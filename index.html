@@ -1,35 +1,169 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Document</title>
+    <title>Index page</title>
+    <style>
+      .table {
+        width: 100%;
+
+        border-width: 3px;
+      }
+      .first-row {
+        height: 70px;
+        background-color: aquamarine;
+      }
+      .first-row-th-1 {
+        border-style: solid;
+        border-color: black;
+        border-width: 3px;
+        background-color: rgb(165, 168, 168);
+        font-size: 30px;
+      }
+      .first-row-th-1 a {
+        color: black;
+        text-decoration: none;
+      }
+      .second-row {
+        height: 500px;
+        background-color: rgb(151, 172, 234);
+      }
+      .second-row-td-one {
+        border-style: solid;
+        border-color: black;
+        border-width: 3px;
+        background-color: rgb(151, 172, 234);
+        font-size: 30px;
+        align-items: center;
+        text-align: center;
+      }
+      .third-row {
+        height: 500px;
+        background-color: rgb(41, 92, 75);
+        font-size: 30px;
+        align-items: center;
+        text-align: center;
+      }
+      .fourth-row {
+        height: 500px;
+        background-color: rgb(41, 92, 75);
+        font-size: 25px;
+      }
+      .fifth-row {
+        height: 500px;
+        background-color: rgb(41, 92, 75);
+        font-size: 25px;
+        align-items: center;
+        text-align: center;
+      }
+      .third-row-td-one {
+        border-style: solid;
+        border-color: black;
+        border-width: 3px;
+        background-color: rgb(28, 46, 40);
+      }
+    </style>
   </head>
   <body>
-    <h1>My Assignment</h1>
-    <hr>
-    <br>
-    <ul>
-    <li><a href="top_influencer.html"> Top Influencers</a> </li><br><br>
-    <li><a href="resume.html">Resume</a></li>
-   <br>
-    <br>
-    <li><a href="admissionform.html">SignUp form</a></li><br>
-   <br>
-   <li> <a href="HTML_form.html">HTML Form</a></li>
-   <br> <br>
-   <li><a href="cpucomponents.html">CPU Components</a></li>
-   <br><br>
-   <li><a href="reportcard.html">Report Card</a></li>
-   <br><br>
-   <li><a href="student_data.html">Student Data</a></li>
-   <br><br>
-   <li><a href="youtubepage.html">Youtube Page </a></li>
-   <br><br>
-   <li><a href="layout.html">Layout </a></li>
-   <br><br>
-   <li><a href="tbl_index.html">Index page Using Table Tag </a></li>
-   <br><br>
-   <li><a href="calculator.html">Calculator </a></li>
-   <br><br>
-  </ul>
+    <table class="table">
+      <!-- 1st row  -->
+      <tr class="first-row">
+        <th class="first-row-th-1"><a href="#home">Home</a></th>
+        <th class="first-row-th-1"><a href="#about">About</a></th>
+        <th class="first-row-th-1"><a href="#projects">Projects</a></th>
+        <th class="first-row-th-1"><a href="#contact">Contact</a></th>
+      </tr>
+      <!-- 2nd row  -->
+      <tr class="second-row" id="home">
+        <td colspan="4" s class="second-row-td-one">
+          <!-- home -->
+          <p>
+            Hi, I'm <b>Shriya Gadhawe</b> <br />
+            A Full-Stack Developer with experience in building scalable web
+            applications.
+          </p>
+        </td>
+      </tr>
+      <!-- 3rd row  -->
+      <tr class="third-row" id="about">
+        <td
+          colspan="4"
+          style="background-color: rgb(213, 221, 218)"
+          class="third-row-td-one"
+        >
+          <!-- about -->
+          <h2>About</h2>
+          <p>
+            I’m passionate about writing clean, maintainable code, optimizing
+            web performance, and continuously improving my skills in emerging
+            technologies.
+          </p>
+        </td>
+      </tr>
+      <!-- 4th row  -->
+      <tr class="fourth-row" id="projects">
+        <td
+          colspan="4"
+          style="background-color: rgb(151, 172, 234)"
+          class="third-row-td-one"
+        >
+          <!-- projects -->
+          <h2 style="text-align: center">Projects</h2>
+
+          <ul>
+            <li><a href="top_influencer.html"> Top Influencers</a></li>
+            <br />
+            <li><a href="resume.html">Resume</a></li>
+            <br />
+
+            <li><a href="admissionform.html">SignUp form</a></li>
+            <br />
+
+            <li><a href="HTML_form.html">HTML Form</a></li>
+            <br />
+            <li><a href="cpucomponents.html">CPU Components</a></li>
+            <br />
+            <li><a href="reportcard.html">Report Card</a></li>
+            <br />
+            <li><a href="student_data.html">Student Data</a></li>
+            <br />
+            <li><a href="youtubepage.html">Youtube Page </a></li>
+            <br />
+            <li><a href="layout.html">Layout </a></li>
+            <br />
+            <li><a href="tbl_index.html">Index page Using Table Tag </a></li>
+            <br />
+            <li><a href="calculator.html">Calculator </a></li>
+            <br />
+          </ul>
+        </td>
+      </tr>
+      <!-- 5th row  -->
+      <tr class="fifth-row" id="contact">
+        <td
+          colspan="4"
+          style="background-color: rgb(213, 221, 218)"
+          class="third-row-td-one"
+        >
+          <!-- contact -->
+          <h2>Contact</h2>
+          <b>Phone no. :</b>
+          <a href="tel:+91 89XXXXXXXX">+91 8956XXXXXX</a><br /><br />
+          <b>Location : </b>
+          <b>Katol</b><br /><br />
+          <b>Email :</b>
+          <a href="mailto:shriyagadhawe@gmail.com">shriyagadhawe@gmail.com</a
+          ><br /><br />
+
+          <b>Git Hub Profile : </b>
+          <a href="https://github.com/ShriyaFullStackDeveloper">Git Hub</a
+          ><br /><br />
+          <b>Linkedin : </b>
+          <a href="https://www.linkedin.com/in/shriya-gadhawe-136311314/"
+            >linkedin</a
+          ><br /><br />
+          <b>Skype : </b>Available<br /><br />
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
