@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+      }
+      .main-container {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+        height: 100%;
+      }
+      .box-one {
+        width: 100%;
+        height: 100%;
+        background-color: aquamarine;
+        grid-column: 1 / span 5;
+      }
+      .box-two {
+        width: 100%;
+        height: 100%;
+        background-color: aquamarine;
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 3;
+      }
+      .box-three {
+        width: 100%;
+        height: 100%;
+        background-color: antiquewhite;
+        grid-column: 3 / span 3;
+      }
+      .box-four {
+        width: 100%;
+        height: 100%;
+        background-color: antiquewhite;
+        grid-column: 3 / span 3;
+      }
+      .box-five {
+        width: 100%;
+        height: 100%;
+        background-color: antiquewhite;
+        grid-column: 3 / span 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="box-one"></div>
+      <div class="box-two"></div>
+      <div class="box-three"></div>
+      <div class="box-four"></div>
+      <div class="box-five"></div>
+    </div>
+  </body>
+</html>
