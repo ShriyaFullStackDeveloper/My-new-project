@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=24070528, initial-scale=1.0" />
+    <title>INPUT/OUTPUT </title>
+    <style>
+      /* body */
+     body{
+      background-image: linear-gradient(rgb(133, 207, 230), rgb(231, 231, 141), rgb(90, 234, 242),rgb(105, 154, 233));
+     }
+     /* heading */
+.input-output{
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-family: arial, sans-serif;
+}
+/* table */
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 90%;
+        border: 1px solid black;
+      text-align: center;
+      background-color: lightblue;
+      }
+      /* center table */
+      .center {
+  margin-left: auto;
+  margin-right: auto;
+}
+      #table1 {
+  border-collapse: separate;
+  border-spacing: 15px;
+  border-radius: 10px;
+}
+tr{
+  background-color: white;
+}
+
+      td,
+      th {
+        border: 1px solid black;
+        text-align: left;
+       
+        border-radius: 5px;
+      }
+      img{
+       
+        border-radius: 5px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- heading -->
+    <div class="input-output">
+      <h1>Input/Output in Programming Languages</h1>
+      <hr style="background-color: rgb(20, 92, 92); width: 70%;height: 5px;border: none;">
+
+    </div>
+    <!-- c table  -->
+    <table class="center" id="table1">
+      <br>
+        <caption><h1>C</h1></caption>
+      <tr>
+        <th >
+          <pre >
+            #include <stdio.h>
+
+              int main() {
+                  int age = 19;               
+                  float height = 5.9;         
+                  char grade = 'A';           
+              
+                  printf("Age: %d years\n", age);
+                  printf("Height: %.1f feet\n", height);
+                  printf("Grade: %c\n", grade);
+              
+                  return 0;
+              }
+          </pre>
+        </th>
+        <th style="width: 300px;"><img height="270px" src="./assets/images/c.png" alt=""></th>
+        
+      </tr>
+    </table>
+    <!-- python table -->
+    <br>
+    <br>
+    <table class="center" id="table1">
+      <caption><h1>Python</h1></caption>
+    <tr>
+      <th>
+        <pre>
+                  number =100
+                  sum = number + 100
+                  print(sum)
+  
+  
+                 print("Enter your age")
+                 age = input()
+                  print("Age = ",age)
+      </pre></th>
+      <th style="width: 300px;"><img height="240px" src="./assets/images/py.png" alt=""></th>
+      
+    </tr>
+  </table>
+  <br>
+  <br>
+  <!--Javascript table  -->
+  <table class="center" id="table1">
+    <caption><h1>Javascript</h1></caption>
+  <tr>
+    <!-- 1 -->
+    <th>
+      <pre>
+       
+           boxOne = 10;
+      boxTwo = 30;
+      sum = boxOne + boxTwo;
+      console.log(sum);
+      console.log("boxOne is " + boxOne);
+      console.log("the sum of two variable is " + sum);
+       
+      </pre>
+    </th>
+    <th ><img height="340px" src="./assets/images/js-console.png" alt=""></th>
+  <!-- 2 -->
+    <tr>
+      <th><pre>
+       
+          let input = prompt("Enter a number:");
+          alert("You entered :"+ input);
+     
+      </pre></th>
+      <th style="width: 300px;"><img height="260px" src="./assets/images/alert1.png" alt="">
+        <img height="200px" width="100%" src="./assets/images/alert2.png" alt=""></th>
+      
+    </tr>
+    <!-- 3 -->
+    <tr>
+      <th>
+        <pre>
+        < label for="">Enter any no.< / label>
+       <br><br>
+        < input type="number" id="number">
+      <br><br>
+        < input type="submit" id="submit" >
+
+  
+        document.getElementById("display").innerHTML = "hello JS"
+
+ 
+  
+      </pre></th>
+      <th ><img height="200px" src="./assets/images/enter.png" alt=""></th>
+      
+    </tr>
+  </tr>
+
+</table>
+
+<br>
+<br>
+<!-- java table -->
+<table class="center" id="table1">
+  <caption><h1>Java</h1></caption>
+<tr>
+  <!-- 1 -->
+   <tr>
+  <th><pre>
+    class Scratch {
+      public static void main(String[] args) {
+          System.out.println(2+2);
+          System.out.println("Hello Java!");
+          System.out.println("SHRIYA");
+          }
+          
+          }
+  </pre></th>
+  <th ><img height="250px" width="100%"  src="./assets/images/java1.png" alt=""></th>
+</tr>
+<!-- 2 -->
+  <tr>
+    
+    <th><pre>
+      import java.util.Scanner;
+      class Scratch {
+          public static void main(String[] args) {
+              Scanner input = new Scanner(System.in);
+      
+              System.out.println("Enter a = ");
+             int a = input.nextInt();
+      
+             System.out.println("Enter b  = ");
+            int b = input.nextInt();
+      
+            boolean  result = a > b ;
+            System.out.println("a is greater than b :"+result);
+          }
+      }
+    </pre></th>
+    <th ><img height="250px" width="100%" src="./assets/images/java2.png" alt=""></th>
+        
+    
+  </tr>
+  
+</tr>
+</table>
+<!--java table end -->
+  </body>
+</html>
