@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Cards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c;
+            color: #e2e8f0;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            display: block; /* Removed flex from body */
+        }
+
+        .cards-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        .project-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .image-container {
+            height: 12rem;
+            overflow: hidden;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #2d3748;
+        }
+
+        .card-content p {
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            color: #4a5568;
+        }
+
+        .view-button {
+            display: block;
+            width: 100%;
+            padding: 0.5rem 1rem;
+            background-color: #2563eb;
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 9999px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .view-button:hover {
+            background-color: #1d4ed8;
+        }
+
+        @media (min-width: 1200px) {
+            .cards-grid-container {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 1199px) {
+            .cards-grid-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cards-grid-container">
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/alarm-snoozer.html" aria-label="View Alarm Snoozer">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Alarm+Snoozer" alt="Alarm Snoozer">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Alarm Snoozer</h3>
+                <a href="../../javascript/PROJECTS/alarm-snoozer.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/Amazon.html" aria-label="View Amazon Page Clone">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Amazon+Clone" alt="Amazon Page Clone">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Amazon Page Clone</h3>
+                <a href="../../javascript/PROJECTS/Amazon.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/atm.html" aria-label="View ATM Interface">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=ATM+Interface" alt="ATM Interface">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>ATM Interface</h3>
+                <a href="../../javascript/PROJECTS/atm.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/banking-system.html" aria-label="View Banking System">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Banking+System" alt="Banking System">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Banking System</h3>
+                <a href="../../javascript/PROJECTS/banking-system.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/budget-calculator.html" aria-label="View Budget Calculator">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Budget+Calculator" alt="Budget Calculator">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Budget Calculator</h3>
+                <a href="../../javascript/PROJECTS/budget-calculator.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/coin.html" aria-label="View Coin Flipper">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Coin+Flipper" alt="Coin Flipper">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Coin Flipper</h3>
+                <a href="../../javascript/PROJECTS/coin.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/date-hrs.html" aria-label="View Date and Hours">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Date+%26+Hours" alt="Date and Hours">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Date and Hours</h3>
+                <a href="../../javascript/PROJECTS/date-hrs.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS//days-hr-1.html" aria-label="View Days and Hours 1">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Days+%26+Hours+1" alt="Days and Hours 1">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Days and Hours 1</h3>
+                <a href="../../javascript/PROJECTS/days-hr-1.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/days-hr.html" aria-label="View Days and Hours">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Days+%26+Hours" alt="Days and Hours">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Days and Hours</h3>
+                <a href="../../javascript/PROJECTS/days-hr.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/discount.html" aria-label="View Discount Calculator">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Discount+Calculator" alt="Discount Calculator">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Discount Calculator</h3>
+                <a href="../../javascript/PROJECTS/discount.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/ex-1.html" aria-label="View Example 1">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Example+1" alt="Example 1">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Example 1</h3>
+                <a href="../../javascript/PROJECTS/ex-1.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/ex-2.html" aria-label="View Example 2">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Example+2" alt="Example 2">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Example 2</h3>
+                <a href="../../javascript/PROJECTS/ex-2.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/ex-3.html" aria-label="View Example 3">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Example+3" alt="Example 3">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Example 3</h3>
+                <a href="../../javascript/PROJECTS/ex-3.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/ex-4.html" aria-label="View Example 4">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Example+4" alt="Example 4">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Example 4</h3>
+                <a href="../../javascript/PROJECTS/ex-4.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/fibonaccii.html" aria-label="View Fibonacci Generator">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Fibonacci" alt="Fibonacci Generator">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Fibonacci Generator</h3>
+                <a href="../../javascript/PROJECTS/fibonaccii.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/food-order.html" aria-label="View Food Order System">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Food+Order" alt="Food Order System">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Food Order System</h3>
+                <a href="../../javascript/PROJECTS/food-order.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS//gold-coin.html" aria-label="View Gold Coin Game">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Gold+Coin+Game" alt="Gold Coin Game">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Gold Coin Game</h3>
+                <a href="../../javascript/PROJECTS/gold-coin.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/greeting.html" aria-label="View Greeting App">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Greeting+App" alt="Greeting App">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Greeting App</h3>
+                <a href="../../javascript/PROJECTS/greeting.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/login-page.html" aria-label="View Login Page">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Login+Page" alt="Login Page">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Login Page</h3>
+                <a href="../../javascript/PROJECTS/login-page.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/marks.html" aria-label="View Marksheet Calculator">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Marksheet+Calculator" alt="Marksheet Calculator">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Marksheet Calculator</h3>
+                <a href="../../javascript/PROJECTS/marks.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/one.html" aria-label="View Project One">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Project+One" alt="Project One">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Project One</h3>
+                <a href="../../javascript/PROJECTS/one.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/p-d-g.html" aria-label="View P-D-G">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=P-D-G" alt="P-D-G">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>P-D-G</h3>
+                <a href="../../javascript/PROJECTS/p-d-g.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/pass-checker.html" aria-label="View Password Checker">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Password+Checker" alt="Password Checker">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Password Checker</h3>
+                <a href="../../javascript/PROJECTS/pass-checker.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/pin-validation.html" aria-label="View PIN Validation">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=PIN+Validation" alt="PIN Validation">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>PIN Validation</h3>
+                <a href="../../javascript/PROJECTS/pin-validation.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/pizza.html" aria-label="View Pizza Order Form">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Pizza+Order" alt="Pizza Order Form">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Pizza Order Form</h3>
+                <a href="../../javascript/PROJECTS/pizza.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/random-multi.html" aria-label="View Random Multiplier">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Random+Multiplier" alt="Random Multiplier">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Random Multiplier</h3>
+                <a href="../../javascript/PROJECTS/random-multi.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/random10.html" aria-label="View Randomizer 10">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Randomizer+10" alt="Randomizer 10">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Randomizer 10</h3>
+                <a href="../../javascript/PROJECTS/random10.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/random3.html" aria-label="View Randomizer 3">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Randomizer+3" alt="Randomizer 3">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Randomizer 3</h3>
+                <a href="../../javascript/PROJECTS/random3.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/score-check.html" aria-label="View Score Checker">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Score+Checker" alt="Score Checker">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Score Checker</h3>
+                <a href="../../javascript/PROJECTS/score-check.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/sp.html" aria-label="View Sp">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=SP" alt="SP">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>SP</h3>
+                <a href="../../javascript/PROJECTS/sp.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/table.html" aria-label="View Table Generator">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Table+Generator" alt="Table Generator">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Table Generator</h3>
+                <a href="../../javascript/PROJECTS/table.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/tax.html" aria-label="View Tax Calculator">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Tax+Calculator" alt="Tax Calculator">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Tax Calculator</h3>
+                <a href="../../javascript/PROJECTS/tax.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/temp.html" aria-label="View Temperature Converter">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Temperature+Converter" alt="Temperature Converter">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Temperature Converter</h3>
+                <a href="../../javascript/PROJECTS/temp.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/ternary-ifelse.html" aria-label="View Ternary If-Else">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Ternary+If-Else" alt="Ternary If-Else">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Ternary If-Else</h3>
+                <a href="../../javascript/PROJECTS/ternary-ifelse.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/ternary-op.html" aria-label="View Ternary Operator">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Ternary+Operator" alt="Ternary Operator">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Ternary Operator</h3>
+                <a href="../../javascript/PROJECTS/ternary-op.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/ticket.html" aria-label="View Ticket System">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Ticket+System" alt="Ticket System">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Ticket System</h3>
+                <a href="../../javascript/PROJECTS/ticket.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../../javascript/PROJECTS/translate-lang.html" aria-label="View Language Translator">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Language+Translator" alt="Language Translator">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Language Translator</h3>
+                <a href="../../javascript/PROJECTS/translate-lang.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

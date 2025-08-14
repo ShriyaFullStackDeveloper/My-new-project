@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fibonacci Sequence</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #333;
+    }
+
+    .label {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    #result {
+      font-size: 20px;
+      color: #00796b;
+      margin-top: 10px;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="label">Fibonacci sequence up to 10:</div>
+    <h1 id="result"></h1>
+  </div>
+
+  <script>
+    let num1 = 0;
+    let num2 = 1;
+    let num3 = num1 + num2;
+    let result = num1 + "," + num2;
+    
+    while (num3 <= 10) {
+      result += "," + num3;
+      num1 = num2;
+      num2 = num3;
+      num3 = num1 + num2;
+      console.log(result);
+    }
+    document.getElementById("result").innerHTML = result;
+  </script>
+
+</body>
+</html>

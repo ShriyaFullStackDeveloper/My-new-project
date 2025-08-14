@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Cards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c;
+            color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .cards-flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            max-width: 1280px;
+            width: 100%;
+        }
+
+        .project-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            flex-grow: 1;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .image-container {
+            height: 12rem;
+            overflow: hidden;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #2d3748;
+        }
+
+        .card-content p {
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            color: #4a5568;
+        }
+
+        .view-button {
+            display: block;
+            width: 100%;
+            padding: 0.5rem 1rem;
+            background-color: #2563eb;
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 9999px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .view-button:hover {
+            background-color: #1d4ed8;
+        }
+
+        @media (min-width: 640px) {
+            .project-card {
+                flex-basis: calc(50% - 0.75rem);
+                max-width: calc(50% - 0.75rem);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .project-card {
+                flex-basis: calc(25% - 1.125rem);
+                max-width: calc(25% - 1.125rem);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cards-flex-container">
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../HTML/admissionform.html" aria-label="View Project One">
+                    <img src="https://placehold.co/600x400/87CEEB/fff?text=Project+1" alt="Project 1">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Project Title One</h3>
+                <a href="../HTML/admissionform.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../HTML/calculator.html" aria-label="View Project Two">
+                    <img src="https://placehold.co/600x400/90EE90/fff?text=Project+2" alt="Project 2">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Project Title Two</h3>
+                <a href="../HTML/calculator.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../HTML/cpucomponents.html" aria-label="View Project Three">
+                    <img src="https://placehold.co/600x400/FFA07A/fff?text=Project+3" alt="Project 3">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Project Title Three</h3>
+                <a href="../HTML/cpucomponents.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../HTML/HTML_form.html" aria-label="View Project Four">
+                    <img src="https://placehold.co/600x400/DDA0DD/fff?text=Project+4" alt="Project 4">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Project Title Four</h3>
+                <a href="../HTML/HTML_form.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../HTML/reportcard.html" aria-label="View Project Four">
+                    <img src="https://placehold.co/600x400/DDA0DD/fff?text=Project+4" alt="Project 4">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Project Title Four</h3>
+                <a href="../HTML/reportcard.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../HTML/student_data.html" aria-label="View Project Four">
+                    <img src="https://placehold.co/600x400/DDA0DD/fff?text=Project+4" alt="Project 4">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Project Title Four</h3>
+                <a href="../HTML/student_data.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../HTML/top_influencer.html" aria-label="View Project Four">
+                    <img src="https://placehold.co/600x400/DDA0DD/fff?text=Project+4" alt="Project 4">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Project Title Four</h3>
+                <a href="../HTML/top_influencer.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="image-container">
+                <a href="../HTML/youtubepage.html" aria-label="View Project Four">
+                    <img src="https://placehold.co/600x400/DDA0DD/fff?text=Project+4" alt="Project 4">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Project Title Four</h3>
+                <a href="../HTML/youtubepage.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

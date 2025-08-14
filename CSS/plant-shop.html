@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLANT</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+      }
+      /* container */
+      .main-container {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      /* header */
+      .header {
+        width: 100%;
+        height: 100px;
+        display: grid;
+        grid-column: 1 / span 2;
+        grid-template-columns: 1fr 1fr;
+      }
+      /* logo */
+      .logo {
+        height: 100%;
+        width: 100%;
+      }
+      /* link */
+      .link {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      /* box-2 */
+      .box-two {
+        width: 100%;
+        height: 100px;
+        text-align: center;
+      }
+
+      /* box 3 */
+      .box-three {
+        height: 600px;
+        width: 100%;
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 2;
+      }
+
+      /* box 4 */
+      .box-four {
+        height: 400px;
+        width: 100%;
+      }
+      /* box 5 */
+      .box-five {
+        height: 600px;
+        grid-column: 1/ 2 span;
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 30px;
+      }
+      /* card box */
+      .card-box {
+        width: 96%;
+        height: auto;
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        row-gap: 30px;
+        column-gap: 30px;
+        text-align: center;
+        padding: 20px;
+      }
+      /* card */
+      .card {
+        height: 400px;
+        width: 100%;
+        background-color: rgb(235, 237, 239);
+        border-radius: 20px;
+      }
+      .img {
+        border-radius: 20px;
+      }
+      .desc {
+        font-size: 30px;
+        margin-left: 2%;
+      }
+      span {
+        font-size: 30px;
+        margin-top: 20px;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- container -->
+    <div class="main-container">
+      <!-- header -->
+      <div class="header">
+        <!-- logo -->
+        <div class="logo">
+          <h1 style="margin-left: 2%">PlantNest</h1>
+        </div>
+        <!-- link -->
+        <div class="link">
+          <span>Home</span>
+          <span>Product</span>
+          <span>About shop</span>
+          <span>Contact</span>
+        </div>
+      </div>
+      <!-- box 2 -->
+      <div class="box-two">
+        <h2 style="font-size: 50px">
+          Welcome to <span style="font-size: 50px">PlantNest</span>
+        </h2>
+      </div>
+      <!-- /box 3 -->
+      <div class="box-three">
+        <img
+          src="https://www.homesake.in/cdn/shop/files/IH0C978_theme.jpg?v=1706095658"
+          height="500px"
+          width="600px"
+          alt="Cake image"
+        />
+      </div>
+      <!-- box 4 -->
+      <div class="box-four">
+        <h3 class="desc">
+          Plants make for the best house companions, suitable for all your moods
+          and every aesthetic. Ugaoo, an online website for decorative plants,
+          offers a wide variety of plants so that you can buy plants online from
+          the comfort of your home!
+        </h3>
+      </div>
+      <!-- box 5 -->
+      <div class="box-five">
+        <!-- card box -->
+        <div class="card-box">
+          <!-- card -->
+          <div class="card">
+            <img
+              class="img"
+              src="https://www.ugaoo.com/cdn/shop/files/1_e6967afc-5169-4945-b4b4-0e00c34cb4ab.jpg?v=1740131773&width=750"
+              alt=""
+              height="300px"
+              width="100%"
+            />
+            <h3>Monstera Deliciosa Plant - XL</h3>
+            <h4>$23</h4>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <img
+              class="img"
+              src="https://www.ugaoo.com/cdn/shop/products/Growpot_e29e91e2-5021-4cca-817a-0b8f898ff73b.jpg?v=1741079606&width=750"
+              alt=""
+              height="300px"
+              width="100%"
+            />
+            <h3>Peace Lily Plant</h3>
+            <h4>$23</h4>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <img
+              class="img"
+              src="https://www.ugaoo.com/cdn/shop/products/SpiroCeramicPot-White_7162f78e-ef39-4241-bbf2-0c17e2d30675.jpg?v=1696240355&width=750"
+              alt=""
+              height="300px"
+              width="100%"
+            />
+            <h3>Bamboo Palm Plant</h3>
+            <h4>$23</h4>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <img
+              class="img"
+              src="https://www.ugaoo.com/cdn/shop/products/DSC_9150.jpg?v=1680418283&width=750"
+              alt=""
+              height="300px"
+              width="100%"
+            />
+            <h3>Jade Plant Mini</h3>
+            <h4>$23</h4>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <img
+              class="img"
+              src="https://www.ugaoo.com/cdn/shop/files/2_ff4d5b2f-8499-4618-af77-7bb76f3d9497.jpg?v=1741698805&width=750"
+              alt=""
+              height="300px"
+              width="100%"
+            />
+            <h3>Brazilian Wood Plant</h3>
+            <h4>$23</h4>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <img
+              class="img"
+              src="https://www.ugaoo.com/cdn/shop/files/PeperomiaGreen_812e328a-53f7-4961-80e1-3c9641e8c9f0.jpg?v=1707727788&width=750"
+              alt=""
+              height="300px"
+              width="100%"
+            />
+            <h3>Peperomia Green Plant</h3>
+            <h4>$23</h4>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <img
+              class="img"
+              src="https://www.ugaoo.com/cdn/shop/files/1_44713654-fadc-43c3-868b-966b8c624bbf.jpg?v=1706608270&width=750"
+              alt=""
+              height="300px"
+              width="100%"
+            />
+            <h3>KMonstera Deliciosa Plant</h3>
+            <h4>$23</h4>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <img
+              class="img"
+              src="https://www.ugaoo.com/cdn/shop/files/medium-gropot-ivory-areca-palm-plant-32515461578884.jpg?v=1710162127&width=750"
+              alt=""
+              height="300px"
+              width="100%"
+            />
+            <h3>Areca Palm Plant</h3>
+            <h4>$23</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

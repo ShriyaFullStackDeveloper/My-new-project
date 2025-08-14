@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Password Checker</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 50px;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .card h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .card button {
+      background-color: #0069d9;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .card button:hover {
+      background-color: #0051a3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>🔐 Password Match Checker</h2>
+    <p>Click the button and enter the password to check if it matches.</p>
+    <button onclick="campair()">Check Password</button>
+  </div>
+
+  <script>
+    function campair() {
+      let password = prompt("Enter the password");
+      if (password == "technology") {
+        alert("Password is matched!")
+      } else {
+        alert("Password is not Matched!")
+      }
+    }
+  </script>
+</body>
+</html>

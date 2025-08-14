@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+        *{
+            font-family:sans-serif;
+        }
+      body {
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+        background: linear-gradient(to right, #a8c0ff,#c081f0, #775fe1);
+      
+      }
+/* main container */
+      .main-container {
+        height: 750px;
+        width: 70%;
+        background-color: white;
+        border-radius: 10px;
+        margin-left: 210px;
+      }
+
+      
+
+      .h1 {
+        font-size: 37px;
+        text-decoration: underline  linear-gradient(to right, #a8c0ff,#c081f0, #775fe1 );
+        padding-top: 20px;
+        padding-left: 50px;
+       
+      }
+      .hr{
+        margin-left: 50px;
+        width: 50px;
+        height: 5px;
+        background-color: #775fe1;
+      }
+      /* container */
+      .container {
+        width: 100%;
+        height: 360px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 20px;
+      }
+
+      .container-one {
+        width: 100%;
+        height: 360px;
+      }
+
+      .container-two {
+        width: 100%;
+        height: 360px;
+      }
+/* label */
+      label {
+        font-size: 25px;
+        margin-left: 50px;
+       
+      }
+/* input */
+      input [type="text"],
+      [type="email"],
+      [type="password"],
+      [type="tel"],
+      [type="text"] {
+        height: 50px;
+        width: 400px;
+        font-size: 25px;
+        margin-top: 10px;
+        margin-left: 50px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+/* gender sec */
+      .gender-sec {
+        height: 100px;
+        width: 100%;
+        margin-top: 10px;
+        display: grid;
+      }
+     
+
+/* optios */
+      .options {
+        margin-left: 20px;
+        padding-top: 20px;
+      }
+/* radio */
+      input[type="radio"] {
+        width: 24px;
+        height: 30px;
+        margin-left: 100px;
+      }
+/* submit */
+      .submit {
+        height: 60px;
+        width: 90%;
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(to right, #a8c0ff,#c081f0, #775fe1);
+        margin-top: 30px;
+      margin-left: 50px;
+border: none;
+        border-radius: 10px;
+      }
+      /* hover */
+      .submit:hover {
+        color:black;
+      }
+      /* heading */
+      .heading {
+        width: 98%;
+        height: 12%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- main-container -->
+    <div class="main-container">
+        <!-- heading -->
+      <div class="heading">
+        <!-- h1 -->
+        <h1 class=" hr">Registration</h1>
+
+      </div>
+      <!-- c -->
+      <div class="container">
+        <!-- c 1 -->
+        <div class="container-one">
+          <label><b>Full Name</b></label>
+          <br />
+          <input class="box" type="text" placeholder="Enter your name" />
+          <br />
+          <br />
+          <label><b>Email</b></label>
+          <br />
+          <input type="email" placeholder="Enter your email" />
+          <br /><br />
+          <label><b>Password</b></label>
+          <br />
+          <input type="password" placeholder="Enter your password" />
+        </div>
+        <!-- c 2 -->
+        <div class="container-two">
+          <label><b>Username</b></label>
+          <br />
+          <input type="text" placeholder="Enter your username" />
+          <br /><br />
+          <label><b>Phone Number</b></label>
+          <br />
+          <input type="tel" placeholder="Enter your number" />
+          <br /><br />
+          <label><b>Confirm password</b></label>
+          <br />
+          <input type="password" placeholder="Confirm your password" />
+        </div>
+      </div>
+      <!-- gendersection -->
+      <div class="gender-sec">
+        <label><b>Gender</b></label>
+        <div class="gender">
+          <input type="radio" name="gender" id="male" />
+          <label class="options" for="male">Male</label>
+          <input type="radio" name="gender" id="female" />
+          <label class="options" for="female">Female</label>
+          <input type="radio" name="gender" id="prefer not to say" />
+          <label class="options" for="prefer not to say"
+            >Prefer not to say</label
+          >
+        </div>
+      </div>
+
+    <!-- submit -->
+        <input class="submit" type="submit" value="Register" />
+      
+    </div>
+  </body>
+</html>

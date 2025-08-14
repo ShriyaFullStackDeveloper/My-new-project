@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Tax Calculator</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f0f2f5;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 30px 25px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px 0;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #444;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Simple Tax Calculator</h2>
+    <input type="number" id="incomeInput" placeholder="Enter income in ₹ Lakh">
+    <button onclick="runTaxCalc()">Calculate Tax</button>
+    <div id="output" class="result"></div>
+  </div>
+
+  <script>
+    function calculateTax(income) {
+      let tax = 0;
+
+      if (income > 30) {
+        tax += (income - 30) * 0.30;
+        income = 30;
+      }
+      if (income > 24) {
+        tax += (income - 24) * 0.20;
+        income = 24;
+      }
+      if (income > 12) {
+        tax += (income - 12) * 0.10;
+        income = 12;
+      }
+      if (income > 6) {
+        tax += (income - 6) * 0.05;
+      }
+
+      return tax;
+    }
+
+    function runTaxCalc() {
+      const input = document.getElementById('incomeInput').value;
+      const output = document.getElementById('output');
+      const income = parseFloat(input);
+
+      if (isNaN(income) || income < 0) {
+        output.innerHTML = "<span class='error'>❌ Please enter a valid income.</span>";
+        return;
+      }
+
+      const tax = calculateTax(income);
+      output.innerHTML = `For an income of ₹${income.toFixed(2)} Lakh,<br>Tax is <strong>₹${tax.toFixed(2)} Lakh</strong>`;
+    }
+  </script>
+
+</body>
+</html>

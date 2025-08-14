@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+ 
+  color: white;
+
+}
+header {
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  /* background-color: transparent; */
+  /* filter: drop-shadow(10px); */
+  display: flex;
+  justify-content: space-between;
+  
+  align-items: center;
+  z-index: 100;
+ 
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  
+}
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.5rem;
+  color: #00FFFF;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.5s ease;
+  text-decoration: none;
+
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+nav a {
+  font-size: 1.8rem;
+  color: white;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+  text-decoration: none;
+
+}
+nav a:hover,
+nav a.active {
+  color: #00FFFF;
+  border-bottom: 3px solid #00FFFF;
+}
+@media (max-width: 995px) {
+  /* nav {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    width: 100%;
+    border-left: 3px solid brown;
+    border-bottom: 3px solid brown;
+    border-bottom-left-radius: 2rem;
+    padding: 1rem solid;
+    background-color: rgb(61, 59, 59);
+    border-top: 0.1rem solid rgb(39, 38, 38);
+  } */
+ 
+    nav {
+      display: flex; /* <- fix: show nav */
+      flex-direction: column;
+      align-items: flex-end;
+      position: absolute;
+      top: 100%;
+      right: 9%;
+      background-color: rgb(61, 59, 59);
+      padding: 2rem;
+      border: 1px solid #00FFFF;
+      border-radius: 1rem;
+      z-index: 101;
+    }
+  
+  
+  nav .active {
+    display: block;
+    
+  }
+  nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  nav a:hover,
+  nav a.active {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid #00FFFF;
+  }
+}
+
+section {
+  min-height: 100vh;
+  padding: 5rem 9% 5rem;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  background: linear-gradient(to bottom, #000000, #0a0f3c, #0c1248, #0e1554, #101961, #000000);
+
+}
+.home .home-content h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+span {
+  color: #00FFFF;
+}
+.home-content h3 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.home-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 100;
+}
+.home-img {
+  width: 72vw;
+  height: 32vw; /* square box */
+  overflow: hidden;
+  border-radius: 2rem; /* rounded corners */
+  box-shadow: 0 0 25px #00FFFF;
+  animation: floatContainer 4s ease-in-out infinite;
+}
+
+
+.home-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@keyframes floatContainer {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* .home-img {
+  width: 32vw;
+  height: 32vw; /* keeps it square */
+  /* overflow: hidden;
+  border-radius: 2rem;
+  box-shadow: 0 0 25px brown;
+  animation: floatAround 6s ease-in-out infinite;
+} */
+
+
+/* .home-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; fills the box without stretching */
+  /* transition: transform 0.3s ease;
+}
+@keyframes floatAround {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, -10px);
+  }
+  50% {
+    transform: translate(-10px, 10px);
+  }
+  75% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+} */ 
+
+
+/* .home-img {
+  border-radius: 50%;
+}
+
+.home-img img {
+  position: relative;
+  width: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px brown;
+  cursor: pointer;
+  transition: 0.2s linear;
+} */
+/* .home-img img:hover {
+  font-size: 1.8rem;
+  font-weight: 500;
+} */
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 0.2rem solid #00FFFF;
+  font-size: 2rem;
+  border-radius: 50%;
+  color: #00FFFF;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  color: black;
+  transform: scale(1.3) translateY(-5px);
+  background-color: #00FFFF;
+  box-shadow: 0 0 25px #00FFFF;
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background-color: black;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  color: #00FFFF;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  border: 2px solid #00FFFF;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+.btn:hover {
+  transform: scale3d(1.03);
+  background-color:  #00FFFF ;
+  color: black;
+  box-shadow: 0 0 25px #00FFFF;
+}
+.hire-btn{
+  width: 100%;
+  display: flex;
+ gap: 15px;
+}
+.typing-text {
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+.typing-text span {
+  position: relative;
+}
+.typing-text span:before {
+  content: "Software Developer";
+  color:  #00FFFF;
+  animation: words 20s infinite;
+}
+.typing-text span:after {
+  content: "";
+  color: black;
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid black;
+  right: -8;
+  animation: cursor 0.6s infinite;
+}
+@keyframes cursor {
+  to {
+    border-left: 3px solid brown;
+  }
+}
+@keyframes words {
+  0% ,40% {
+    content: "Web dev";
+  }
+  41%, 80% {
+    content: "software dev";
+  }
+  81% ,100% {
+    content: "fullstack dev";
+  }
+}
+@media (max-width:1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+@media (max-width:995px){
+    .home{
+       flex-direction: column;
+       margin: 5rem 4rem;
+    }
+    .home .home-content h3{
+        font-size: 2.5rem;
+
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+    .home-img img{
+        width: 70vh;
+        margin-top: 4rem;
+    }
+    
+}
+@media (max-width: 600px) {
+  .home-content h1 {
+    font-size: 3.5rem;
+  }
+  .home-content h3 {
+    font-size: 2rem;
+  }
+  .typing-text {
+    font-size: 2rem;
+  }
+}
+/* ABOUT */
+.my-info{
+  background: linear-gradient(to bottom, #000000, #0a0f3c, #0c1248, #0e1554, #101961, #000000);
+}
+.about {
+ 
+  backdrop-filter: blur(10px);
+  background-color:transparent;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.about h1 {
+  font-size: 36px;
+  color: #00FFFF;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+
+
+.about > p:first-of-type {
+  text-align: center;
+  color: #0077b6;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+}
+
+.info table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+  background-color: transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info th,
+.info td {
+  text-align: left;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+.info th {
+  background-color:transparent;
+  color: #00FFFF;
+  font-weight: 600;
+  width: 30%;
+}
+
+.info td {
+  color: #0077b6;
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 40px 15px;
+  }
+
+  .about h1 {
+    font-size: 28px;
+  }
+
+  .info table {
+    font-size: 14px;
+  }
+
+  .info th,
+  .info td {
+    padding: 10px;
+  }
+}
+
+
