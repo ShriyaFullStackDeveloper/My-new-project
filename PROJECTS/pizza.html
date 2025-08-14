@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pizza Menu - Switch Case</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .menu-box {
+      background-color: #fff;
+      color: #333;
+      padding: 25px;
+      border-radius: 12px;
+      width: 300px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu-box h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #b30000;
+    }
+
+    .option {
+      padding: 12px 20px;
+      margin: 10px 0;
+      border-radius: 8px;
+      background-color: #eee;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .option.selected {
+      background-color: #ffd966;
+      border-color: #f39c12;
+      font-weight: bold;
+    }
+
+    .price-display {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #d4edda;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      color: #155724;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-box">
+    <h2>🍕 Pizza Menu</h2>
+    <div id="small" class="option" onclick="selectPizza('small')">Small Pizza - ₹150</div>
+    <div id="medium" class="option" onclick="selectPizza('medium')">Medium Pizza - ₹250</div>
+    <div id="large" class="option" onclick="selectPizza('large')">Large Pizza - ₹350</div>
+    <div id="result" class="price-display"></div>
+  </div>
+
+  <script>
+    function selectPizza(size) {
+      // Step 1: Remove "selected" class from all
+      document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+
+      // Step 2: Add to the clicked one
+      document.getElementById(size).classList.add('selected');
+
+      // Step 3: Use switch to get price
+      let price;
+      switch (size) {
+        case 'small':
+          price = 150;
+          break;
+        case 'medium':
+          price = 250;
+          break;
+        case 'large':
+          price = 350;
+          break;
+        default:
+          price = 0;
+      }
+
+      // Step 4: Display result
+      document.getElementById('result').innerText = `You selected ${size} pizza: ₹${price}`;
+    }
+  </script>
+</body>
+</html>

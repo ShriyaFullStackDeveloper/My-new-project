@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time-Based Greeting</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #121212, #333);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      margin: 0;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      width: 350px;
+    }
+
+    h2 {
+      color: #333;
+    }
+    label {
+  color: #333;
+  font-weight: bold;
+}
+
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .output {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #d4edda;
+      color: #155724;
+      border-left: 5px solid #28a745;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Time-Based Greeting</h2>
+    <label>Enter current hour (0 – 23):</label><br>
+    <input type="number" id="hour" >
+    <button onclick="showGreeting()">Get Greeting</button>
+    <div class="output" id="result"></div>
+  </div>
+
+  <script>
+    function showGreeting() {
+      let hour = Number(document.getElementById("hour").value);
+      let greeting = "";
+
+      switch (true) {
+        case (hour >= 5 && hour <= 11):
+          greeting = "Good Morning ☀️";
+          break;
+        case (hour >= 12 && hour <= 17):
+          greeting = "Good Afternoon 🌞";
+          break;
+        case (hour >= 18 && hour <= 21):
+          greeting = "Good Evening 🌇";
+          break;
+        case ((hour >= 22 && hour <= 23) || (hour >= 0 && hour <= 4)):
+          greeting = "Good Night 🌙";
+          break;
+        default:
+          greeting = "Invalid hour!";
+      }
+
+      document.getElementById("result").innerText = greeting;
+    }
+  </script>
+</body>
+</html>

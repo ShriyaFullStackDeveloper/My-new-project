@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Income Tax Calculator</title>
+  <style>
+    body {
+      background: #f1f6f9;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      width: 350px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 16px;
+      text-align: left;
+    }
+
+    .result span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Income Tax Calculator</h2>
+    <input type="number" id="income" placeholder="Enter Income in ₹ Lakh" />
+    <button onclick="runTaxCalc()">Calculate Tax</button>
+    <div class="result" id="output"></div>
+  </div>
+
+  <script>
+    function calculateTax(income) {
+      let tax = 0;
+
+      if (income <= 6) {
+          tax = 0;
+      } else if (income > 6 && income <= 12) {
+          tax = (income - 6) * 0.05;
+      } else if (income > 12 && income <= 24) {
+          tax = (6 * 0.05) + (income - 12) * 0.10;
+      } else if (income > 24 && income <= 30) {
+          tax = (6 * 0.05) + (12 * 0.10) + (income - 24) * 0.20;
+      } else {
+          tax = (6 * 0.05) + (12 * 0.10) + (6 * 0.20) + (income - 30) * 0.30;
+      }
+
+      return tax;
+    }
+
+    function runTaxCalc() {
+      const income = Number(document.getElementById("income").value);
+      const output = document.getElementById("output");
+
+      if (isNaN(income) || income <= 0) {
+        output.innerHTML = "❌ Please enter a valid income.";
+        return;
+      }
+
+      const tax = calculateTax(income);
+
+      output.innerHTML = `
+        <p><span>Income:</span> ₹${income.toFixed(2)} Lakh</p>
+        <p><span>Tax:</span> ₹${tax.toFixed(2)} Lakh</p>
+      `;
+    }
+  </script>
+</body>
+</html>
