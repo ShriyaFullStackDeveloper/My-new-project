@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c;
+            color: #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            width: 100%;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: #a0aec0;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cards-flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.75rem;
+            max-width: 1280px;
+            width: 100%;
+        }
+
+        .project-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            flex-grow: 1;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container {
+            height: 14rem;
+            overflow: hidden;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 1.75rem;
+        }
+
+        .card-content h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: #2d3748;
+        }
+
+        .view-button {
+            display: block;
+            width: 100%;
+            padding: 0.75rem 1.25rem;
+            background-color: #2563eb;
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 9999px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .view-button:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        @media (min-width: 640px) {
+            .project-card {
+                flex-basis: calc(50% - 1rem);
+                max-width: calc(50% - 1rem);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .project-card {
+                flex-basis: calc(25% - 1.5rem);
+                max-width: calc(25% - 1.5rem);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-header">
+        <h1>Design Projects</h1>
+        <p>Explore my Figma design projects showcasing various UI/UX concepts and interactive prototypes</p>
+    </div>
+
+    <div class="cards-flex-container">
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="https://www.figma.com/design/VeMeUJCLmtSecVIzYowGAO/Untitled?node-id=0-1&p=f&t=bv9SCpVW68rKet51-0l" aria-label="View Sonae Jewelry Website Design">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Jewelry Website Design">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Sonae Jewelry Website</h3>
+                <a href="https://www.figma.com/design/VeMeUJCLmtSecVIzYowGAO/Untitled?node-id=0-1&p=f&t=bv9SCpVW68rKet51-0">
+                    <button class="view-button">View Design</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="https://www.figma.com/design/ot7dDvq4dMseqFSLegg5qV/The-coffee-house?node-id=0-1&p=f&t=EkUxhptNKGUpt04K-0" aria-label="View Coffee House Design">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Coffee House Design">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>The Coffee House</h3>
+                <a href="https://www.figma.com/design/ot7dDvq4dMseqFSLegg5qV/The-coffee-house?node-id=0-1&p=f&t=EkUxhptNKGUpt04K-0">
+                    <button class="view-button">View Design</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="https://www.figma.com/proto/ZZAq8FK8xyFzU1QhbiLiTn/FITBITE?node-id=37-197" aria-label="View FITBITE Website Prototype">
+                    <img src="https://plus.unsplash.com/premium_photo-1673108852141-e8c3c22a4a22?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D" alt="FitBite Website Prototype">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>FITBITE Website</h3>
+                <a href="https://www.figma.com/proto/ZZAq8FK8xyFzU1QhbiLiTn/FITBITE?node-id=37-197">
+                    <button class="view-button">View Prototype</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="https://www.figma.com/design/yqIZacfto0UuHtcnh3Mo3a/word-scramble-game?t=EkUxhptNKGUpt04K-0" aria-label="View Word Scramble Game Design">
+                    <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Word Game Design">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Word Scramble Game</h3>
+                <a href="https://www.figma.com/design/yqIZacfto0UuHtcnh3Mo3a/word-scramble-game?t=EkUxhptNKGUpt04K-0">
+                    <button class="view-button">View Design</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

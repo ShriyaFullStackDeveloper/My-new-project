@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c;
+            color: #e2e8f0;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #a0aec0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cards-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+            padding: 1rem;
+            box-sizing: border-box;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .image-container {
+            height: 12rem;
+            overflow: hidden;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #2d3748;
+        }
+
+        .card-content p {
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            color: #4a5568;
+        }
+
+        .view-button {
+            display: block;
+            width: 100%;
+            padding: 0.5rem 1rem;
+            background-color: #2563eb;
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 9999px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .view-button:hover {
+            background-color: #1d4ed8;
+        }
+
+        @media (min-width: 1200px) {
+            .cards-grid-container {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 1199px) {
+            .cards-grid-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>JavaScript Projects</h1>
+        <p>A collection of interactive web applications built with JavaScript. Click on any project to explore it.</p>
+    </div>
+
+    <div class="cards-grid-container">
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/alarm-snoozer.html" aria-label="View Alarm Snoozer">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Alarm Clock">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Alarm Snoozer</h3>
+                <a href="./javascript/PROJECTS/alarm-snoozer.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/Amazon.html" aria-label="View Amazon Page Clone">
+                    <img src="https://images.unsplash.com/photo-1600003263720-95b45a4035d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Amazon Shopping">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Amazon Page Clone</h3>
+                <a href="./javascript/PROJECTS/Amazon.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/atm.html" aria-label="View ATM Interface">
+                    <img src="https://images.unsplash.com/photo-1710149459994-480e2b5c3b16?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXRtfGVufDB8fDB8fHww" alt="ATM Machine">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>ATM Interface</h3>
+                <a href="./javascript/PROJECTS/atm.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/banking-system.html" aria-label="View Banking System">
+                    <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Banking System">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Banking System</h3>
+                <a href="./javascript/PROJECTS/banking-system.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/budget-calculator.html" aria-label="View Budget Calculator">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Budget Calculator">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Budget Calculator</h3>
+                <a href="./javascript/PROJECTS/budget-calculator.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/coin.html" aria-label="View Coin Flipper">
+                    <img src="https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Coin Flip">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Coin Flipper</h3>
+                <a href="./javascript/PROJECTS/coin.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/date-hrs.html" aria-label="View Date and Hours">
+                    <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Calendar and Clock">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Date and Hours</h3>
+                <a href="./javascript/PROJECTS/date-hrs.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/days-hr-1.html" aria-label="View Days and Hours 1">
+                    <img src="https://images.unsplash.com/photo-1499343245400-cddc78a01317?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Time Tracking">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Days and Hours 1</h3>
+                <a href="./javascript/PROJECTS/days-hr-1.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/days-hr.html" aria-label="View Days and Hours">
+                    <img src="https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Days and Hours">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Days and Hours</h3>
+                <a href="./javascript/PROJECTS/days-hr.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/discount.html" aria-label="View Discount Calculator">
+                    <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Discount Calculator">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Discount Calculator</h3>
+                <a href="./javascript/PROJECTS/discount.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/ex-1.html" aria-label="View Salary Deductor">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Salary Calculation">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Salary Deductor</h3>
+                <a href="./javascript/PROJECTS/ex-1.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/ex-2.html" aria-label="View Flat 50% Discount">
+                    <img src="https://images.unsplash.com/photo-1607082352121-fa243f3dde32?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="50% Discount">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Flat 50% Discount</h3>
+                <a href="./javascript/PROJECTS/ex-2.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/ex-3.html" aria-label="View Password Match Checker">
+                    <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Password Security">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Password Match Checker</h3>
+                <a href="./javascript/PROJECTS/ex-3.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/ex-4.html" aria-label="View Voter Eligibility Check">
+                    <img src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Voting Booth">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Voter Eligibility Check</h3>
+                <a href="./javascript/PROJECTS/ex-4.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/fibonaccii.html" aria-label="View Fibonacci Generator">
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Fibonacci Sequence">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Fibonacci Generator</h3>
+                <a href="./javascript/PROJECTS/fibonaccii.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/food-order.html" aria-label="View Food Order System">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Food Order">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Food Order System</h3>
+                <a href="./javascript/PROJECTS/food-order.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/gold-coin.html" aria-label="View Gold Coin Game">
+                    <img src="https://images.unsplash.com/photo-1624365169106-1f1f4cd65c91?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z29sZCUyMGNvaW5zfGVufDB8fDB8fHww" alt="Gold Coins">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Gold Coin Game</h3>
+                <a href="./javascript/PROJECTS/gold-coin.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/greeting.html" aria-label="View Greeting App">
+                    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Greeting">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Greeting App</h3>
+                <a href="./javascript/PROJECTS/greeting.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/login-page.html" aria-label="View Login Page">
+                    <img src="https://plus.unsplash.com/premium_photo-1720192861639-1524439fc166?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bG9naW58ZW58MHx8MHx8fDA%3D" alt="Login Screen">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Login Page</h3>
+                <a href="./javascript/PROJECTS/login-page.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/marks.html" aria-label="View Marksheet Calculator">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Report Card">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Marksheet Calculator</h3>
+                <a href="./javascript/PROJECTS/marks.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/one.html" aria-label="View Income Tax Calculator">
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Tax Form">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Income Tax Calculator</h3>
+                <a href="./javascript/PROJECTS/one.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/p-d-g.html" aria-label="View Fruit list">
+                    <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Fruits">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Fruit list</h3>
+                <a href="./javascript/PROJECTS/p-d-g.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/pass-checker.html" aria-label="View Password Checker">
+                    <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Password Check">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Password Checker</h3>
+                <a href="./javascript/PROJECTS/pass-checker.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/pin-validation.html" aria-label="View PIN Validation">
+                    <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="PIN Code">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>PIN Validation</h3>
+                <a href="./javascript/PROJECTS/pin-validation.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/pizza.html" aria-label="View Pizza Order Form">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Pizza">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Pizza Order Form</h3>
+                <a href="./javascript/PROJECTS/pizza.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/random-multi.html" aria-label="View Random Multiplier">
+                    <img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Random Numbers">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Random Multiplier</h3>
+                <a href="./javascript/PROJECTS/random-multi.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/random10.html" aria-label="View Roller Coaster Ride Check">
+                    <img src="https://images.unsplash.com/photo-1516051662687-567d7c4e8f6a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9sbGVyJTIwY29hc3RlcnxlbnwwfHwwfHx8MA%3D%3D" alt="Roller Coaster">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Roller Coaster Ride Check</h3>
+                <a href="./javascript/PROJECTS/random10.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/random3.html" aria-label="View Click increment">
+                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Click Counter">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Click increment</h3>
+                <a href="./javascript/PROJECTS/random3.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/score-check.html" aria-label="View Score Checker">
+                    <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Scoreboard">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Score Checker</h3>
+                <a href="./javascript/PROJECTS/score-check.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/sp.html" aria-label="View Star Pattern">
+                    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Stars">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Star Pattern</h3>
+                <a href="./javascript/PROJECTS/sp.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/table.html" aria-label="View Table Generator">
+                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Multiplication Table">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Table Generator</h3>
+                <a href="./javascript/PROJECTS/table.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/tax.html" aria-label="View Tax Calculator">
+                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Tax Calculator">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Tax Calculator</h3>
+                <a href="./javascript/PROJECTS/tax.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/temp.html" aria-label="View Temperature Converter">
+                    <img src="https://images.unsplash.com/photo-1560977501-7cb367eccebe?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGhlcm1vbWV0ZXJ8ZW58MHx8MHx8fDA%3D" alt="Thermometer">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Temperature Converter</h3>
+                <a href="./javascript/PROJECTS/temp.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/ternary-ifelse.html" aria-label="View Ternary If-Else">
+                    <img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Conditional Logic">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Vowel or Consonant Checker</h3>
+                <a href="./javascript/PROJECTS/ternary-ifelse.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/ternary-op.html" aria-label="View Vowel or Consonant Checker">
+                    <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Alphabet">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Number Checker</h3>
+                <a href="./javascript/PROJECTS/ternary-op.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/ticket.html" aria-label="View Ticket System">
+                    <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Tickets">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Ticket System</h3>
+                <a href="./javascript/PROJECTS/ticket.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/translate-lang.html" aria-label="View Language Translator">
+                    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Languages">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Language Translator</h3>
+                <a href="./javascript/PROJECTS/translate-lang.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./javascript/PROJECTS/word-scramble.html" aria-label="View Word Scramble Game">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Scrambled Letters">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Word Scramble Game</h3>
+                <a href="./javascript/PROJECTS/word-scramble.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

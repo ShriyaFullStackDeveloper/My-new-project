@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c;
+            color: #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .page-heading {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .cards-flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            max-width: 1280px;
+            width: 100%;
+        }
+
+        .project-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            flex-grow: 1;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .image-container {
+            height: 12rem;
+            overflow: hidden;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #2d3748;
+        }
+
+        .card-content p {
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            color: #4a5568;
+        }
+
+        .view-button {
+            display: block;
+            width: 100%;
+            padding: 0.5rem 1rem;
+            background-color: #2563eb;
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 9999px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .view-button:hover {
+            background-color: #1d4ed8;
+        }
+
+        @media (min-width: 640px) {
+            .project-card {
+                flex-basis: calc(50% - 0.75rem);
+                max-width: calc(50% - 0.75rem);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .project-card {
+                flex-basis: calc(25% - 1.125rem);
+                max-width: calc(25% - 1.125rem);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="page-heading">CSS Projects</h1>
+
+    <div class="cards-flex-container">
+        <!-- Grid Class Project -->
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./CSS/grid-class-three.html" aria-label="Grid Class Layout">
+                    <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=600&auto=format&fit=crop" alt="Grid layout example">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Grid Class Layout</h3>
+                <a href="./CSS/grid-class-three.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- CSS Grid Project -->
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./CSS/grid-three.html" aria-label="CSS Grid Project">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=600&auto=format&fit=crop" alt="CSS Grid layout">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>CSS Grid Layout</h3>
+                <a href="./CSS/grid-three.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- CSS Layout -->
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./CSS/layout.html" aria-label="CSS Layout">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=600&auto=format&fit=crop" alt="CSS Layout">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>CSS Layout</h3>
+                <a href="./CSS/layout.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Pizza Layout -->
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./CSS/pizza.html" aria-label="Pizza Shop Layout">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600&auto=format&fit=crop" alt="Pizza shop layout">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Pizza Shop Layout</h3>
+                <a href="./CSS/pizza.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Plant Shop -->
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./CSS/plant-shop.html" aria-label="Plant Shop">
+                    <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=600&auto=format&fit=crop" alt="Plant shop">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Plant Shop Layout</h3>
+                <a href="./CSS/plant-shop.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Profile Card -->
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./CSS/profile-card.html" aria-label="Profile Card">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" alt="Profile card">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Profile Card</h3>
+                <a href="./CSS/profile-card.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Profile Page -->
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./CSS/profile.html" aria-label="Profile Page">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=600&auto=format&fit=crop" alt="Profile page">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Profile Page</h3>
+                <a href="./CSS/profile.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./CSS/registration.html" aria-label="Registration Form">
+                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=600&auto=format&fit=crop" alt="Registration form">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Registration Form</h3>
+                <a href="./CSS/registration.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Resume -->
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./CSS/resume-1.html" aria-label="Resume">
+                    <img src="https://images.unsplash.com/photo-1546820389-44d77e1f3b31?q=80&w=600&auto=format&fit=crop" alt="Resume">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Resume</h3>
+                <a href="./CSS/resume-1.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Table Layout -->
+        <div class="project-card">
+            <div class="image-container">
+                <a href="./CSS/tbl-index.html" aria-label="Table Layout">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop" alt="Table layout">
+                </a>
+            </div>
+            <div class="card-content">
+                <h3>Table Layout</h3>
+                <a href="./CSS/tbl-index.html">
+                    <button class="view-button">View Project</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
