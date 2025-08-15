@@ -19,6 +19,7 @@
             min-height: 100vh;
             padding: 1rem;
             margin: 0;
+      
             box-sizing: border-box;
         }
 
@@ -60,6 +61,7 @@
             cursor: pointer;
             transition: transform 0.3s ease-in-out;
             flex-grow: 1;
+            
         }
 
         .project-card:hover {
@@ -100,6 +102,22 @@
             color: #4a5568;
         }
 
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .side-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .side-buttons a {
+            flex: 1;
+        }
+
         .view-button {
             display: block;
             width: 100%;
@@ -113,10 +131,30 @@
             transition: background-color 0.3s ease;
             border: none;
             cursor: pointer;
+            text-decoration: none;
         }
 
         .view-button:hover {
             background-color: #1d4ed8;
+        }
+
+        .doc-button {
+            background-color: #22cae7;
+            text-decoration: none;
+        }
+
+        .doc-button:hover {
+            background-color: #059669;
+        }
+
+        .test-button {
+            background-color: #22cae7;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .test-button:hover {
+            background-color: #059669;
         }
 
         @media (min-width: 640px) {
@@ -151,9 +189,19 @@
             </div>
             <div class="card-content">
                 <h3>The Coffee House</h3>
-                <a href="./BOOTSTRAP/NEW-CAFE/cafe-1.html">
-                    <button class="view-button">View Project</button>
-                </a>
+                <div class="buttons-container">
+                    <a href="./BOOTSTRAP/NEW-CAFE/cafe-1.html">
+                        <button class="view-button">View Project</button>
+                    </a>
+                    <div class="side-buttons">
+                        <a href="https://docs.google.com/document/d/1fcjt5NzWlvT5YmTUAAK06m_1cFTi-fhvalRkeX7YH-Y/edit?tab=t.0">
+                            <button class="view-button doc-button">View Document</button>
+                        </a>
+                        <a href="https://docs.google.com/spreadsheets/d/1_0O30DEEal7bSkGn66K8e-_GoTA2KuaetPs2DrxzWQI/edit?gid=0#gid=0">
+                            <button class="view-button test-button">View Testing</button>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -165,9 +213,19 @@
             </div>
             <div class="card-content">
                 <h3>The Dine Restaurant</h3>
-                <a href="./BOOTSTRAP/NEW-CAFE/the-dine-spot.html">
-                    <button class="view-button">View Project</button>
-                </a>
+                <div class="buttons-container">
+                    <a href="./BOOTSTRAP/NEW-CAFE/the-dine-spot.html">
+                        <button class="view-button">View Project</button>
+                    </a>
+                    <div class="side-buttons">
+                        <a href="https://docs.google.com/document/d/1Fj_qVAF-45SQBmxYEpnUAoWw4fKGF8dbIc14-eK-mHI/edit?tab=t.0#heading=h.4nz922xyop3v">
+                            <button class="view-button doc-button">View Document</button>
+                        </a>
+                        <a href="https://docs.google.com/spreadsheets/d/1XwniaRjeBcRAfWUSKP4x1eGj5dLStIMols4aZ4iYVAY/edit?gid=0#gid=0">
+                            <button class="view-button test-button">View Testing</button>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -179,9 +237,19 @@
             </div>
             <div class="card-content">
                 <h3>Sonae Jewelry Website</h3>
-                <a href="./LIVE-PROJECT/sonae-website.html">
-                    <button class="view-button">View Project</button>
-                </a>
+                <div class="buttons-container">
+                    <a href="./LIVE-PROJECT/sonae-website.html">
+                        <button class="view-button">View Project</button>
+                    </a>
+                    <div class="side-buttons">
+                        <a href="https://docs.google.com/document/d/1o7Nq_F41kLmyrin0tG5isumENA2_L63QHf4TbSp-fUs/edit?tab=t.0">
+                            <button class="view-button doc-button">View Document</button>
+                        </a>
+                        <a href="https://docs.google.com/spreadsheets/d/1Sm4BAV6_2Gawx5SDZh6FTIASabBuW_NvRB0eGFBl5WM/edit?gid=0#gid=0">
+                            <button class="view-button test-button">View Testing</button>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
