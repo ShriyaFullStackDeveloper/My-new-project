@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.image-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.blur-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* Adjust this to blur more or less of the top */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  pointer-events: none;
+}
+</style>
+</head>
+<body>
+
+<p>Only the top part of the image is blurred:</p>
+
+<div class="image-container">
+  <img src="https://images.unsplash.com/photo-1459755486867-b55449bb39ff?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIxfHxjb2ZmZWV8ZW58MHx8MHx8fDA%3D" alt="Pineapple">
+  <div class="blur-top"></div>
+</div>
+
+</body>
+</html>

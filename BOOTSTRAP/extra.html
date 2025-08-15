@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>1 Million Users</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+  /* Root variables for easy color adjustments */
+  :root {
+    --red: #f23928;
+    --red-light: #ff543a;
+    --white: #fff;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--white);
+    color: var(--red);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* Top Red Polygon Shape */
+  .red-shape {
+    position: relative;
+    background-color: var(--red);
+    height: 140px;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+
+  .content {
+    padding: 2rem 1rem 4rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 0 0 1rem;
+  }
+
+  p.subtitle {
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin: 0 0 3rem;
+  }
+
+  .btn-downloads {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+
+  .btn-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--red);
+    border-radius: 8px;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    min-width: 140px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .btn-download svg {
+    height: 1.25rem;
+    width: auto;
+    margin-right: 0.5rem;
+  }
+
+  .btn-download:hover,
+  .btn-download:focus {
+    background-color: var(--red);
+    color: var(--white);
+    outline: none;
+  }
+
+  /* Rounded pill navigation bar below */
+  nav {
+    background-color: var(--red);
+    border-radius: 9999px;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 0 8px 15px rgba(242, 57, 40, 0.3);
+  }
+
+  nav button {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+  }
+
+  nav button:hover,
+  nav button:focus {
+    background-color: var(--red-light);
+    outline: none;
+  }
+
+  nav button svg {
+    width: 12px;
+    height: 12px;
+    stroke: var(--white);
+    stroke-width: 2;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  nav button.business {
+    margin: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  nav button.business svg {
+    margin-left: 0.3rem;
+    stroke-width: 3;
+  }
+
+  /* Dropdown indicator arrow for personal and company */
+  .arrow-down {
+    display: inline-block;
+    width: 10px;
+    height: 6px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(-45deg);
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  /* Responsive text scaling */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .btn-download {
+      min-width: 120px;
+      font-size: 0.8rem;
+      padding: 0.4rem 0.8rem;
+    }
+
+    nav {
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="red-shape"></div>
+  <main class="content" role="main">
+    <h1>1 million users,<br />plus you.</h1>
+    <p class="subtitle">It only takes few seconds to get started.</p>
+
+    <div class="btn-downloads" aria-label="App download links">
+      <a href="#" class="btn-download" aria-label="Download on the App Store">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.365 1.43a4.408 4.408 0 0 1 3.108 1.384 4.366 4.366 0 0 1 1.062 3.31c-.042 1.395-.968 3.37-2.514 4.806-1.434 1.312-3.08 2.345-4.94 2.345h-.15c-.278 0-.56-.008-.845-.022-1.55-.098-3.21-1.813-4.357-3.595-1.148-1.783-2.18-4.044-2.058-5.155a4.349 4.349 0 0 1 1.914-3.325 4.427 4.427 0 0 1 3.27-.75c1.12.147 2.076.507 2.712.824.271.148.495.28.67.385z"/><path d="M14.65 7.665a7.647 7.647 0 0 1 2.092 4.466 6.19 6.19 0 0 1-1.439 4.875c-.608.817-1.4 1.504-2.335 2.035l-.003.003a5.405 5.405 0 0 1-4.607 0 9.916 9.916 0 0 1-2.372-1.695c-.538-.482-1.213-1.258-2.002-2.254a17.53 17.53 0 0 1-2.323-3.847A7.133 7.133 0 0 1 5.97 7.51c.068 0 .136.002.203.005a7.93 7.93 0 0 1 1.727.36 6.11 6.11 0 0 1 3.281 3.79 7.1 7.1 0 0 1 3.47-3.99Z"/></svg>
+        App Store
+      </a>
+      <a href="#" class="btn-download" aria-label="Get it on Google Play">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12L19 3v18L3.5 12z"/><path d="M19 3 10 10l7 7"/></svg>
+        Google Play
+      </a>
+    </div>
+
+    <nav aria-label="User account type navigation">
+      <button aria-haspopup="true" aria-expanded="false" aria-controls="personal-menu">
+        <span aria-hidden="true" style="margin-right:8px;">&#8962;</span> 
+        Personal <span class="arrow-down"></span>
+      </button>
+      <button class="business" aria-label="Business section">
+        Business <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <button aria-haspopup="true" aria-expanded="false" aria-controls="company-menu">
+        Company <span class="arrow-down"></span>
+      </button>
+    </nav>
+  </main>
+</body>
+</html>
+

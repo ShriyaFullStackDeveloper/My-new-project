@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coffee House - Aapke Cafe ka Naam</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- YAHAN APNE COLORS AUR FONTS CUSTOMIZE KAREIN --- */
+        :root {
+            --primary-color: #6F4E37; /* Coffee Brown */
+            --secondary-color: #F5F5DC; /* Beige */
+            --dark-color: #333;
+            --light-color: #fff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+        }
+
+        #hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-bg.jpg'); /* APNI HERO IMAGE YAHAN LAGAYEIN */
+            background-size: cover;
+            background-position: center;
+            color: var(--light-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        #hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+        }
+
+        .section-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+        }
+        
+        .card {
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .menu-item .card-body {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .btn-primary:hover {
+            background-color: #5a3f2b;
+            border-color: #5a3f2b;
+        }
+        
+        #contact {
+            background-color: var(--secondary-color);
+        }
+
+        .footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+        .footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: var(--light-color);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="#">☕ The Coffee House</a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="container">
+            <h1 class="display-3">Life Begins After Coffee</h1>
+            <p class="lead">Shehar ka sabse behtareen coffee experience, sirf aapke liye.</p>
+            <a href="#menu" class="btn btn-primary btn-lg mt-3">Hamara Menu Dekhein</a>
+        </div>
+    </section>
+
+    <main>
+        <section id="about" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Hamari Kahani</h2>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <img src="images/about-us.jpg" alt="Cafe Interior" class="img-fluid rounded shadow">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Ek Cup se Shuru Hui Dosti</h3>
+                        <p>Hum sirf coffee nahi banate, hum yaadein banate hain. Hamara safar 2020 mein shuru hua ek chote se sapne ke saath - ek aisi jagah banana jahan log sukoon se baith kar ek acchi coffee ka anand le sakein.</p>
+                        <p>Hum behtareen beans ko local roasters se lete hain aur har cup ko pyaar se taiyaar karte hain. Aaiye, hamare is safar ka hissa baniye.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="menu" class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Hamara Menu</h2>
+                    <p class="text-muted">Khaas aapke liye, pyaar se banaya hua.</p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 menu-item">
+                        <div class="card h-100">
+                            <img src="images/espresso.jpg" class="card-img-top" alt="Espresso">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Espresso</h5>
+                                <p class="card-text">Strong & Rich shot of coffee.</p>
+                                <p class="fw-bold h5">₹150</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 menu-item">
+                        <div class="card h-100">
+                            <img src="images/cappuccino.jpg" class="card-img-top" alt="Cappuccino">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Cappuccino</h5>
+                                <p class="card-text">Espresso with steamed milk foam.</p>
+                                <p class="fw-bold h5">₹180</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 menu-item">
+                        <div class="card h-100">
+                           <img src="images/latte.jpg" class="card-img-top" alt="Latte">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Caffè Latte</h5>
+                                <p class="card-text">Creamy & smooth with more milk.</p>
+                                <p class="fw-bold h5">₹200</p>
+                            </div>
+                        </div>
+                    </div>
+                     </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Yaadon ka Pitara</h2>
+                     <p class="text-muted">Hamare cafe ki kuch jhalakiyan.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4"><img src="images/gallery1.jpg" class="img-fluid rounded shadow" alt="Gallery Image 1"></div>
+                    <div class="col-md-4"><img src="images/gallery2.jpg" class="img-fluid rounded shadow" alt="Gallery Image 2"></div>
+                    <div class="col-md-4"><img src="images/gallery3.jpg" class="img-fluid rounded shadow" alt="Gallery Image 3"></div>
+                    <div class="col-md-4"><img src="images/gallery4.jpg" class="img-fluid rounded shadow" alt="Gallery Image 4"></div>
+                    <div class="col-md-4"><img src="images/gallery5.jpg" class="img-fluid rounded shadow" alt="Gallery Image 5"></div>
+                    <div class="col-md-4"><img src="images/gallery6.jpg" class="img-fluid rounded shadow" alt="Gallery Image 6"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Humse Sampark Karein</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.833923490794!2d72.88335321540302!3d19.07102788709033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c631d9c1331d%3A0x507e152525f231fa!2sBandra%20Kurla%20Complex!5e0!3m2!1sen!2sin!4v1672834989123!5m2!1sen!2sin" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="fs-4 me-3"><i class="bi bi-geo-alt-fill text-primary"></i></div>
+                            <div>
+                                <h5>Address</h5>
+                                <p>123 Coffee Lane, BKC, Mumbai, India</p> </div>
+                        </div>
+                         <div class="d-flex align-items-center mb-3">
+                            <div class="fs-4 me-3"><i class="bi bi-telephone-fill text-primary"></i></div>
+                            <div>
+                                <h5>Phone</h5>
+                                <p>+91 98765 43210</p> </div>
+                        </div>
+                         <div class="d-flex align-items-center mb-3">
+                            <div class="fs-4 me-3"><i class="bi bi-envelope-fill text-primary"></i></div>
+                            <div>
+                                <h5>Email</h5>
+                                <p>hello@thecoffeehouse.com</p> </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="fs-4 me-3"><i class="bi bi-clock-fill text-primary"></i></div>
+                            <div>
+                                <h5>Opening Hours</h5>
+                                <p>Har Din, Subah 9:00 baje - Raat 10:00 baje</p> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer text-center py-4">
+        <div class="container">
+            <p>&copy; 2025 The Coffee House. All Rights Reserved.</p>
+            <div>
+                <a href="#" class="fs-4 me-3"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="fs-4 me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="fs-4"><i class="bi bi-twitter-x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

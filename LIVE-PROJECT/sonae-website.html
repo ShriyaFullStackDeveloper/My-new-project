@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sonaé - Sparkling Avenues</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@1&family=Georgia&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="sonae-website.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-1">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+          <div class="nav-container">
+            <a id="logo" href="#" class="logo">Sonaé</a>
+
+            <ul class="nav-links">
+              <li id="head-1"><a href="#jewellery">All Jewellery</a></li>
+              <li id="head-2"><a href="#trending">Trending</a></li>
+              <li id="head-3"><a href="#services">Services</a></li>
+              <li id="head-4"><a href="#contact">Contact Us</a></li>
+              <!-- <li> <select name="language" onchange="translateLanguage()" id="select-lang">
+                <option value="English" selected="">English</option>
+                <option value="Marathi">Marathi</option>
+                <option value="Hindi">Hindi</option>
+                
+              </select></li> -->
+            </ul>
+          </div>
+        </nav>
+         <!-- language files -->
+    <!-- <button onclick="translateLanguage()">Translate</button> -->
+    <!-- <script src="english.js"></script>
+
+    <script src="marathi.js"></script>
+    <script src="hindi.js"></script> -->
+   
+    <!-- translaate language -->
+    <!-- <script>
+      const translate = {
+        English: englishData,
+        Marathi: marathiData,
+        Hindi: hindiData,
+        
+      };
+      function translateLanguage() {
+        const selectedlanguage = document.getElementById("select-lang").value;
+        // const result = translate[selectedlanguage];
+        document.getElementById("logo").innerHTML =
+          translate[selectedlanguage].logo;
+        document.getElementById("paragraph").innerHTML =
+          translate[selectedlanguage].paragraph;
+        localStorage.setItem("language", selectedlanguage);
+      }
+
+      window.onload = function () {
+        let savedLanguage = localStorage.getItem("language");
+        document.getElementById("select-lang").value = savedLanguage;
+        translateLanguage();
+      };
+    </script> -->
+
+        <!-- Hero Section -->
+        <section class="hero">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="hero-title">
+                <span class="animated-text">Sparkling Avenues</span>
+              </h1>
+              <p class="hero-subtitle">Trendy style, modern sparkle</p>
+              <a href="view-all.html"
+                ><button class="shop-btn">Shop Now</button></a
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- end -->
+      <!-- tanishq world -->
+      <div class="page-11">
+        <div class="event-section">
+          <h1 style="font-size: 50px; margin-bottom: 10px; color: #333">
+            Sonaé world
+          </h1>
+          <p style="font-size: 30px; margin-top: 0; color: #666">
+            Jewellery pieces everyone's eyeing right now
+          </p>
+        </div>
+        <div class="event-div">
+          <div class="event-one">
+            <div class="event-one-1">
+              <div class="category-text">Wedding</div>
+            </div>
+            <div class="event-one-2">
+              <div class="category-text">Gold</div>
+            </div>
+          </div>
+          <div class="event-two">
+            <div class="event-two-1">
+              <div class="category-text">Diamond</div>
+            </div>
+            <div class="event-two-2">
+              <div class="category-text">Daily wear</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+      <!-- shop now -->
+
+      <!-- looks 4 cards -->
+      <div class="page-4">
+        <div class="look-container">
+          <div class="look-1">
+            <img
+              src="https://images.unsplash.com/photo-1481980235850-66e47651e431?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGpld2VscnklMjBtb2RlbHxlbnwwfHwwfHx8MA%3D%3D"
+              alt="Earrings"
+            />
+            <div class="items">
+              <h5>OUR EARRINGS</h5>
+
+              <p>
+                Grab the deal right now! you can get extra 15% off this season.
+              </p>
+            </div>
+            <a href="earrings.html"><div class="text-line">Shop Now</div></a>
+          </div>
+          <div class="look-1">
+            <img
+              src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amV3ZWxyeXxlbnwwfHwwfHx8MA%3D%3D"
+              alt="Jewellery"
+            />
+            <div class="items">
+              <h5>OUR Rings</h5>
+
+              <p>
+                Grab the deal right now! you can get extra 15% off this season.
+              </p>
+            </div>
+            <a href="finger-rings.html"
+              ><div class="text-line">Shop Now</div></a
+            >
+          </div>
+          <div class="look-1">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1681276170281-cf50a487a1b7?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8amV3ZWxyeXxlbnwwfHwwfHx8MA%3D%3D"
+              alt="Necklace"
+            />
+            <div class="items">
+              <h5>OUR NECKLACES</h5>
+
+              <p>
+                Grab the deal right now! you can get extra 15% off this season.
+              </p>
+            </div>
+            <a href="pendants.html"><div class="text-line">Shop Now</div></a>
+          </div>
+          <div class="look-1">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1681276170092-446cd1b5b32d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+              alt="Bracelets"
+            />
+            <div class="items">
+              <h5>OUR BRACELETS</h5>
+
+              <p>
+                Grab the deal right now! you can get extra 15% off this season.
+              </p>
+            </div>
+            <a href="bracelets.html"><div class="text-line">Shop Now</div></a>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+      <!-- cards-main -->
+      <div id="jewellery" class="page-5">
+        <div class="card-heading">
+          <h1 style="font-size: 50px; margin-bottom: 10px">
+            Find Your Perfect Match
+          </h1>
+          <p style="font-size: 30px; margin-top: 0">Shop by Categories</p>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            
+              <div class="card-one">
+                <a href="earrings.html"><div class="card-image">
+                  <img
+                    src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw83758477/homepage/shopByCategory/earrings-cat.jpg"
+                    alt="Earrings"
+                  />
+                </div>
+                <div class="card-text">
+                  <h2>EARINGS</h2>
+                </div>
+              </div></a
+            >
+           <div class="card-one">
+            <a href="finger-rings.html"
+            ><div class="card-image">
+                  <img
+                    src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw47da8133/homepage/shopByCategory/rings-cat.jpg"
+                    alt="Finger Rings"
+                  />
+                </div>
+                <div class="card-text">
+                  <h2>FINGER RINGS</h2>
+                </div>
+              </div></a
+            >
+          <div class="card-one">
+            <a href="pendants.html"
+            ><div class="card-image">
+                  <img
+                    src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw63553376/homepage/shopByCategory/pendants-cat.jpg"
+                    alt="Pendants"
+                  />
+                </div>
+                <div class="card-text">
+                  <h2>PENDANTS</h2>
+                </div>
+              </div></a
+            >
+            <div class="card-one">
+              <a href="mangal.html"
+              ><div class="card-image">
+                  <img
+                    src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw442a2739/homepage/shopByCategory/mangalsutra-cat.jpg"
+                    alt="Mangalsutra"
+                  />
+                </div>
+                <div class="card-text">
+                  <h2>MANGALSUTRA</h2>
+                </div>
+              </div></a
+            >
+          </div>
+
+          <!-- 2 -->
+          <div class="card">
+            
+              <div class="card-one">
+                <a href="bracelets.html"><div class="card-image">
+                  <img
+                    src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw2562a9fe/homepage/shopByCategory/bracelets-cat.jpg"
+                    alt="Bracelets"
+                  />
+                </div>
+                <div class="card-text">
+                  <h2>BRACELETS</h2>
+                </div>
+              </div></a
+            >
+           <div class="card-one">
+            <a href="bangles.html"
+            ><div class="card-image">
+                  <img
+                    src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw1226b98b/homepage/shopByCategory/bangles-cat.jpg"
+                    alt="Bangles"
+                  />
+                </div>
+                <div class="card-text">
+                  <h2>BANGLES</h2>
+                </div>
+              </div></a
+            >
+            <div class="card-one">
+              <a href="chains.html"
+              ><div class="card-image">
+                  <img
+                    src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dwd0550e4c/homepage/shopByCategory/chains-cat.jpg"
+                    alt="Chains"
+                  />
+                </div>
+                <div class="card-text">
+                  <h2>CHAINS</h2>
+                </div>
+              </div></a
+            >
+            <div class="card-one">
+              <a href="view-all.html"
+              > <div class="card-image">
+                  <img
+                    src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw811a2edc/homepage/shopByCategory/all-jew-cat.jpg"
+                    alt="View All Jewellery"
+                  />
+                </div>
+                <div class="card-text">
+                  <h2>VIEW ALL</h2>
+                </div>
+              </div></a
+            >
+          </div>
+        </div>
+        <!-- end -->
+      </div>
+      <div class="page-2">
+        <div class="box-card">
+          <div class="card-1">
+            <img
+              src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Jewellery 1"
+            />
+            <div class="items">
+              <h5>OUR EARRINGS</h5>
+              <h1>Add These To Your Style Roster.</h1>
+              <p>
+                Grab the deal right now! you can get extra 15% off this season.
+              </p>
+            </div>
+            <a href="earrings.html"><div class="text-line">Shop Now</div></a>
+          </div>
+          <div class="card-2">
+            <img
+              src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Jewellery 2"
+            />
+            <div class="items">
+              <h5>FAVOURITE ITEMS</h5>
+              <h1>UNIQUE ENGAGEMENT RINGS</h1>
+              <p>
+                From special antique diamonds to one of kind colored gemstones.
+              </p>
+            </div>
+            <a href="finger-rings.html">
+              <div class="text-line">Shop Now</div></a
+            >
+          </div>
+        </div>
+      </div>
+      <!--trending  -->
+      <div class="page-6">
+        <div id="trending" class="trending-head">
+          <h1 style="font-size: 50px; margin-bottom: 10px">Trending Now</h1>
+          <p style="font-size: 30px; margin-top: 0">
+            Jewellery pieces everyone’s eyeing right now
+          </p>
+        </div>
+        <div class="trend-div">
+          <a href="occasion.html"
+            ><div class="trend-card">
+              <div class="trend-img">
+                <img
+                  src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw53dce9ad/homepage/trendingNow/rath-yathra.jpg"
+                  alt="Auspicious Occasion"
+                />
+              </div>
+              <div class="trend-text"><h3>Auspicious Occasion</h3></div>
+            </div></a
+          >
+          <a href="gifting.html"
+            ><div class="trend-card">
+              <div class="trend-img">
+                <img
+                  src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dwd7004c0d/homepage/trendingNow/gifting.jpg"
+                  alt="Gifting Jewellery"
+                />
+              </div>
+              <div class="trend-text"><h3>Gifting Jewellery</h3></div>
+            </div></a
+          >
+          <a href="kt-jwell.html"
+            ><div class="trend-card">
+              <div class="trend-img">
+                <img
+                  src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw28989eec/homepage/trendingNow/18kt-jewellery.jpg"
+                  alt="18kt Jewellery"
+                />
+              </div>
+              <div class="trend-text"><h3>18kt Jwellery</h3></div>
+            </div></a
+          >
+        </div>
+        <!-- end -->
+      </div>
+      <!-- looks 1 img -->
+      <div class="latest-trends">
+        <div class="page-7">
+          <h4>Olight Collection</h4>
+          <h1>Shop The Latest Trends</h1>
+          <h4>
+            Exceptional Handcrafted Design to Enhance the Magnificent Glow
+          </h4>
+          <a href="latest-trends.html">
+            <button class="shop-btn">Shop Now</button></a
+          >
+        </div>
+      </div>
+      <!-- end -->
+      <!-- assurance -->
+      <div id="services" class="page-9">
+        <div class="assurance">
+          <div class="ass-one">
+            <h1 style="font-size: 50px; margin-bottom: 10px">
+              Sonaé Assurance
+            </h1>
+            <p style="font-size: 30px; margin-top: 0">
+              Crafted by experts, cherished by you
+            </p>
+          </div>
+          <div class="ass-two">
+            <div class="ass-two-1">
+              <div class="icon-ass">
+                <i class="fa-solid fa-hammer"></i>
+              </div>
+              <div class="icon-ass-text">
+                <p>Quality Craftsmanship</p>
+              </div>
+            </div>
+            <div class="ass-two-1">
+              <div class="icon-ass">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <div class="icon-ass-text">
+                <p>Ethically Sourced</p>
+              </div>
+            </div>
+            <div class="ass-two-1">
+              <div class="icon-ass">
+                <i class="fa-solid fa-gem"></i>
+              </div>
+              <div class="icon-ass-text">
+                <p>100% Transparency</p>
+              </div>
+            </div>
+            <div class="ass-two-1">
+              <div class="icon-ass">
+                <i class="fa-solid fa-right-left"></i>
+              </div>
+              <div class="icon-ass-text">
+                <p>Sonaé Exchange</p>
+              </div>
+            </div>
+
+            <div class="ass-two-1">
+              <div class="icon-ass">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <div class="icon-ass-text">
+                <p>The purity guarantee</p>
+              </div>
+            </div>
+            <div class="ass-two-1">
+              <div class="icon-ass">
+                <i class="fa-solid fa-handshake"></i>
+              </div>
+              <div class="icon-ass-text">
+                <p>Complete transparent and trust</p>
+              </div>
+            </div>
+            <div class="ass-two-1">
+              <div class="icon-ass">
+                <i class="fa-solid fa-wrench"></i>
+              </div>
+              <div class="icon-ass-text">
+                <p>Lifetime Maintenance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end -->
+      </div>
+      <!-- overlaping -->
+      <div class="page-8">
+        <div class="overlap">
+          <div class="black-box">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1661645473770-90d750452fa0?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8amV3ZWxyeXxlbnwwfHwwfHx8MA%3D%3D"
+              alt="Jewelry"
+            />
+            <div class="header-text">
+              <h1>New Arrivals</h1>
+              <p>New Arrivals Dropping Daily, Monday through Friday.</p>
+              <p>Explore the Latest Launches Now!</p>
+            </div>
+          </div>
+          <a href="mangal.html"
+            ><div class="gray-box">
+              <img
+                src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw05fd8a0f/homepage/new-arrivals/mangalsutra.jpg"
+                alt="Mangalsutra"
+              />
+              <div class="box-text">Mangalsutra</div>
+            </div></a
+          >
+          <a href="pendants.html"
+            ><div class="green-box">
+              <img
+                src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw1586e759/homepage/new-arrivals/pendants.jpg"
+                alt="Pendants"
+              />
+              <div class="box-text">Pendants</div>
+            </div></a
+          >
+        </div>
+        <!-- end -->
+      </div>
+
+      <!-- Created for you -->
+      <div class="page-10">
+        <div class="trending-head">
+          <h1 style="font-size: 50px; margin-bottom: 10px">Created For You</h1>
+          <p style="font-size: 30px; margin-top: 0">Shop By Gender</p>
+        </div>
+        <div class="trend-div">
+          <a href="women.html"
+            ><div class="trend-card">
+              <div class="trend-img">
+                <img
+                  src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw811805ad/homepage/ShopByGender/sbg-women.jpg"
+                  alt="Women Jewellery"
+                />
+              </div>
+              <div class="trend-text"><h3>Women Jewellery</h3></div>
+            </div></a
+          >
+          <a href="men.html"
+            ><div class="trend-card">
+              <div class="trend-img">
+                <img
+                  src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dwe6fec18e/homepage/ShopByGender/sbg-men.jpg"
+                  alt="Men Jewellery"
+                />
+              </div>
+              <div class="trend-text"><h3>Men Jewellery</h3></div>
+            </div></a
+          >
+          <a href="kids.html"
+            ><div class="trend-card">
+              <div class="trend-img">
+                <img
+                  src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw1e976d94/homepage/ShopByGender/sbg-kids.jpg"
+                  alt="Kids Jewellery"
+                />
+              </div>
+              <div class="trend-text"><h3>Kids Jewellery</h3></div>
+            </div></a
+          >
+        </div>
+        <!-- end -->
+      </div>
+      <!-- contact -->
+      <section class="contact" id="contact">
+        <div class="page-12">
+          <div id="contact" class="contact-text">
+            <h1 style="font-size: 50px">Contact Us</h1>
+          </div>
+          <div class="contact-box">
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.833923490794!2d72.88335321540302!3d19.07102788709033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c631d9c1331d%3A0x507e152525f231fa!2sBandra%20Kurla%20Complex!5e0!3m2!1sen!2sin!4v1672834989123!5m2!1sen!2sin"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="address">
+              <div class="address-box">
+                <div class="icon">
+                  <h1><i class="fa-solid fa-location-dot"></i></h1>
+                </div>
+                <div>
+                  <h5>Address</h5>
+                  <p>123 Jewellery Street, Mumbai, India</p>
+                </div>
+              </div>
+              <div class="address-box">
+                <div class="icon">
+                  <h1><i class="fa-solid fa-phone"></i></h1>
+                </div>
+                <div>
+                  <h5>Phone</h5>
+                  <a style="text-decoration: none" href="tel:+91 98765 43210">
+                    <p>+91 98765 43210</p></a
+                  >
+                </div>
+              </div>
+              <div class="address-box">
+                <div class="icon">
+                  <h1><i class="fa-solid fa-envelope"></i></h1>
+                </div>
+                <div>
+                  <h5>Email</h5>
+                  <a style="text-decoration: none" href="mailto:hello@sonae.com"
+                    ><p>hello@sonae.com</p></a
+                  >
+                </div>
+              </div>
+              <div class="address-box">
+                <div class="icon">
+                  <h1><i class="fa-solid fa-clock"></i></h1>
+                </div>
+                <div>
+                  <h5>Opening Hours</h5>
+                  <p>Every Day, 10:00 AM - 9:00 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- footer -->
+      <footer>
+        <div class="footer-container">
+          <p>&copy; 2025 Sonaé. All Rights Reserved.</p>
+          <div class="footer-icon">
+            <div>
+              <h1>
+                <a href="https://www.instagram.com/"
+                  ><i
+                    style="color: rgb(85, 216, 201)"
+                    class="fa-brands fa-instagram"
+                  ></i
+                ></a>
+              </h1>
+            </div>
+
+            <div>
+              <h1>
+                <a href="http://facebook.com/?locale=id_ID"
+                  ><i
+                    style="color: rgb(85, 216, 201)"
+                    class="fa-brands fa-facebook"
+                  ></i
+                ></a>
+              </h1>
+            </div>
+            <div>
+              <h1>
+                <a href="https://x.com/"
+                  ><i
+                    style="color: rgb(85, 216, 201)"
+                    class="fa-brands fa-twitter"
+                  ></i
+                ></a>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end -->
+    </div>
+  </body>
+</html>
