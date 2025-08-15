@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Password Strength Checker</title>
+  <style>
+    body {
+      margin: 0; padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f0f4f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 320px;
+    }
+
+    input[type="password"] {
+      width: 100%;
+      padding: 14px 15px;
+      font-size: 18px;
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="password"]:focus {
+      border-color: #667eea;
+      background-color: #e6e9ff;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px 0;
+      font-size: 18px;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      background-color: #667eea;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+
+    button:hover {
+      background-color: #5469d4;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: 700;
+      font-size: 20px;
+      min-height: 24px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <input type="password" id="passwordInput" placeholder="Enter password" />
+    <button onclick="checkPasswordStrength()">Check Strength</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function checkPasswordStrength() {
+      const password = document.getElementById("passwordInput").value;
+
+      let output = 0;
+
+      const hasNumber = /[0-9]/.test(password);
+      const hasUppercase = /[A-Z]/.test(password);
+      const hasLowercase = /[a-z]/.test(password);
+      const hasSpecialChar = /[!@#$%^&*()_\-+={}\[\];:'"\\|><,.?]/.test(password);
+
+      if (
+        password.length >= 12 &&
+        hasNumber &&
+        hasUppercase &&
+        hasLowercase &&
+        hasSpecialChar
+      ) {
+        output = "strong";
+        console.log(password);
+      } else if (password.length >= 4 && (hasNumber || hasSpecialChar)) {
+        output = "moderate";
+      } else if (password.length >= 0) {
+        output = "weak";
+      } else {
+        output = "weak";
+      }
+      document.getElementById("result").innerText =
+        "Password Strength: " + output;
+    }
+  </script>
+
+</body>
+</html>

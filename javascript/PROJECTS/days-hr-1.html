@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Days to Hours Converter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #83a4d4, #b6fbff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Days to Hours Converter</h1>
+    <p id="display"></p>
+</div>
+
+<script>
+    let days = prompt("Enter number of days:");
+    days = Number(days);
+    let hours = days * 24;
+    alert(days + " days is equal to " + hours + " hours.");
+    document.getElementById("display").innerHTML = days + " days is equal to " + hours + " hours.";
+</script>
+
+</body>
+</html>

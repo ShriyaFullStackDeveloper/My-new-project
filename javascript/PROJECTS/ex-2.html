@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Discount Calculator</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 50px;
+      background: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .card h2 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .card button {
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      background-color: #28a745;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .card button:hover {
+      background-color: #218838;
+    }
+
+    #discount {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>🎉 Flat 50% Discount</h2>
+    <p>Original Price: ₹2000<br>Click below to calculate your discount!</p>
+    <button onclick="discount()">Get Discount</button>
+    <div id="discount">Discounted Price will appear here</div>
+  </div>
+
+  <script>
+    function discount(){
+        let origPrice = 2000;
+        alert(origPrice);
+        let discount = origPrice / 2;
+        alert(discount);
+        let discPrice = origPrice - discount;
+        alert (discPrice);
+        document.getElementById("discount").innerHTML = "Discounted Price is " + discPrice;
+    }
+  </script>
+</body>
+</html>

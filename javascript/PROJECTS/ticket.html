@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Movie Ticket Pricing</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #1c1c1c, #3a3a3a);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      margin: 0;
+    }
+
+    .container {
+      background-color: white;
+      color: black;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      width: 350px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #ffe6cc;
+      border-left: 5px solid #ff8000;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🎬 Movie Ticket Pricing</h2>
+    <label for="age">Enter your age:</label>
+    <input type="number" id="age" />
+    <button onclick="getTicketPrice()">Check Ticket Price</button>
+    <div id="output" class="result"></div>
+  </div>
+
+  <script>
+    function getTicketPrice() {
+      let age = Number(document.getElementById("age").value);
+      let output = document.getElementById("output");
+      let category = "";
+      let price = 0;
+
+      if (age >= 0 && age <= 12) {
+        category = "Child (0 – 12 years)";
+        price = 100;
+      } else if (age >= 13 && age <= 19) {
+        category = "Teen (13 – 19 years)";
+        price = 150;
+      } else if (age >= 20 && age <= 59) {
+        category = "Adult (20 – 59 years)";
+        price = 200;
+      } else if (age >= 60) {
+        category = "Senior (60+ years)";
+        price = 120;
+      } else {
+        output.innerText = "Invalid age!";
+        return;
+      }
+
+      output.innerHTML = `${category}<br>Ticket Price: ₹${price}`;
+    }
+  </script>
+</body>
+</html>

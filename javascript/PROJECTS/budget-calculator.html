@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Budget Calculator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    h4 {
+      font-weight: normal;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      transition: 0.2s ease;
+    }
+
+    input:focus {
+      border-color: #4a90e2;
+      outline: none;
+      box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      background-color: #4a90e2;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #357ab8;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #333;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>💰 Budget Calculator</h2>
+    <h4>Enter your income and expenses to learn how addition, subtraction, and division help in budgeting</h4>
+    <input type="number" id="income" placeholder="Monthly Income (₹)">
+    <input type="number" id="rent" placeholder="Rent (₹)">
+    <input type="number" id="food" placeholder="Food (₹)">
+    <input type="number" id="other" placeholder="Other Expenses (₹)">
+    <button onclick="calculateBudget()">Calculate</button>
+
+    <p id="total"></p>
+    <p id="savings"></p>
+    <p id="daily"></p>
+  </div>
+
+  <script>
+    let totalExpenses;
+    let savings;
+    let dailyBudget;
+
+    function calculateBudget() {
+      let income = Number(document.getElementById("income").value);
+      let rent = Number(document.getElementById("rent").value);
+      let food = Number(document.getElementById("food").value);
+      let other = Number(document.getElementById("other").value);
+
+      totalExpenses = rent + food + other;
+      savings = income - totalExpenses;
+      dailyBudget = (savings / 30);
+
+      document.getElementById("total").innerText = `Total Expenses: ₹${totalExpenses}`;
+      document.getElementById("savings").innerText = `Remaining Savings: ₹${savings}`;
+      document.getElementById("daily").innerText = `Daily Budget: ₹${dailyBudget.toFixed(2)}`;
+    }
+  </script>
+</body>
+</html>

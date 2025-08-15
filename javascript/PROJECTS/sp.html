@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Star Patterns - Hollow & Filled</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        text-align: center;
+        background: #f9f9f9;
+      }
+      button {
+        margin: 10px;
+        padding: 10px 25px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      pre {
+        text-align: left;
+        background: #222;
+        color: #0f0;
+        padding: 15px;
+        margin: 15px auto;
+        width: 350px;
+        border-radius: 5px;
+
+        font-family: monospace;
+      }
+      h2 {
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Star Patterns (For Loop & While Loop)</h1>
+
+    <button onclick="showForPatterns()">Show For Loop Patterns</button>
+    <button onclick="showWhilePatterns()">Show While Loop Patterns</button>
+
+    <div id="output"></div>
+
+    <script>
+      const n = 5;
+      const outputDiv = document.getElementById("output");
+
+      // FOR LOOP PATTERNS
+
+      // Filled  Square
+      function filledSquareFor() {
+        let res = "";
+        for (let i = 1; i <= n; i++) {
+          for (let j = 1; j <= n; j++) {
+            res += "* ";
+          }
+          res += "\n";
+        }
+        return res;
+      }
+
+      // Hollow  Square
+      function hollowSquareFor() {
+        let res = "";
+        for (let i = 1; i <= n; i++) {
+          for (let j = 1; j <= n; j++) {
+            res += i === 1 || i === n || j === 1 || j === n ? "* " : "  ";
+          }
+          res += "\n";
+        }
+        return res;
+      }
+
+      // Filled Lef Triangle
+      function filledLeftTriangleFor() {
+        let res = "";
+        for (let i = 1; i <= n; i++) {
+          for (let j = 1; j <= i; j++) {
+            res += "* ";
+          }
+          res += "\n";
+        }
+        return res;
+      }
+
+      // Hollow Left Triangle
+      function hollowLeftTriangleFor() {
+        let res = "";
+        for (let i = 1; i <= n; i++) {
+          for (let j = 1; j <= i; j++) {
+            res += j === 1 || j === i || i === n ? "* " : "  ";
+          }
+          res += "\n";
+        }
+        return res;
+      }
+
+      // Filled Right Triangle
+      function filledRightTriangleFor() {
+        let res = "";
+        for (let i = 1; i <= n; i++) {
+          res += "  ".repeat(n - i);
+          for (let j = 1; j <= i; j++) {
+            res += "* ";
+          }
+          res += "\n";
+        }
+        return res;
+      }
+
+      // Hollow Right Triangle
+      function hollowRightTriangleFor() {
+        let res = "";
+        for (let i = 1; i <= n; i++) {
+          res += "  ".repeat(n - i);
+          for (let j = 1; j <= i; j++) {
+            res += j === 1 || j === i || i === n ? "* " : "  ";
+          }
+          res += "\n";
+        }
+        return res;
+      }
+
+      // Filled Inverted Triangle
+      function filledInvertedTriangleFor() {
+        let res = "";
+        for (let i = n; i >= 1; i--) {
+          for (let j = 1; j <= i; j++) {
+            res += "* ";
+          }
+          res += "\n";
+        }
+        return res;
+      }
+
+      // Hollow Inverted Triangle
+      function hollowInvertedTriangleFor() {
+        let res = "";
+        for (let i = n; i >= 1; i--) {
+          for (let j = 1; j <= i; j++) {
+            res += j === 1 || j === i || i === n ? "* " : "  ";
+          }
+          res += "\n";
+        }
+        return res;
+      }
+
+      // Filled Pyramid
+      function filledPyramidFor() {
+        let res = "";
+        for (let i = 1; i <= n; i++) {
+          res += "  ".repeat(n - i);
+          for (let j = 1; j <= 2 * i - 1; j++) {
+            res += "* ";
+          }
+          res += "\n";
+        }
+        return res;
+      }
+
+      // Hollow Pyramid
+      function hollowPyramidFor() {
+        let res = "";
+        for (let i = 1; i <= n; i++) {
+          res += "  ".repeat(n - i);
+          for (let j = 1; j <= 2 * i - 1; j++) {
+            res += j === 1 || j === 2 * i - 1 || i === n ? "* " : "  ";
+          }
+          res += "\n";
+        }
+        return res;
+      }
+
+      // Filled Inverted Pyramid
+      function filledInvertedPyramidFor() {
+        let res = "";
+        for (let i = n; i >= 1; i--) {
+          res += "  ".repeat(n - i);
+          for (let j = 1; j <= 2 * i - 1; j++) {
+            res += "* ";
+          }
+          res += "\n";
+        }
+        return res;
+      }
+
+      // Hollow Inverted Pyramid
+      function hollowInvertedPyramidFor() {
+        let res = "";
+        for (let i = n; i >= 1; i--) {
+          res += "  ".repeat(n - i);
+          for (let j = 1; j <= 2 * i - 1; j++) {
+            res += j === 1 || j === 2 * i - 1 || i === n ? "* " : "  ";
+          }
+          res += "\n";
+        }
+        return res;
+      }
+
+      //  WHILE LOOP PATTERNS
+
+      function filledSquareWhile() {
+        let res = "";
+        let i = 1;
+        while (i <= n) {
+          let j = 1;
+          while (j <= n) {
+            res += "* ";
+            j++;
+          }
+          res += "\n";
+          i++;
+        }
+        return res;
+      }
+
+      function hollowSquareWhile() {
+        let res = "";
+        let i = 1;
+        while (i <= n) {
+          let j = 1;
+          while (j <= n) {
+            res += i === 1 || i === n || j === 1 || j === n ? "* " : "  ";
+            j++;
+          }
+          res += "\n";
+          i++;
+        }
+        return res;
+      }
+
+      function filledLeftTriangleWhile() {
+        let res = "";
+        let i = 1;
+        while (i <= n) {
+          let j = 1;
+          while (j <= i) {
+            res += "* ";
+            j++;
+          }
+          res += "\n";
+          i++;
+        }
+        return res;
+      }
+
+      function hollowLeftTriangleWhile() {
+        let res = "";
+        let i = 1;
+        while (i <= n) {
+          let j = 1;
+          while (j <= i) {
+            res += j === 1 || j === i || i === n ? "* " : "  ";
+            j++;
+          }
+          res += "\n";
+          i++;
+        }
+        return res;
+      }
+
+      function filledRightTriangleWhile() {
+        let res = "";
+        let i = 1;
+        while (i <= n) {
+          res += "  ".repeat(n - i);
+          let j = 1;
+          while (j <= i) {
+            res += "* ";
+            j++;
+          }
+          res += "\n";
+          i++;
+        }
+        return res;
+      }
+
+      function hollowRightTriangleWhile() {
+        let res = "";
+        let i = 1;
+        while (i <= n) {
+          res += "  ".repeat(n - i);
+          let j = 1;
+          while (j <= i) {
+            res += j === 1 || j === i || i === n ? "* " : "  ";
+            j++;
+          }
+          res += "\n";
+          i++;
+        }
+        return res;
+      }
+
+      function filledInvertedTriangleWhile() {
+        let res = "";
+        let i = n;
+        while (i >= 1) {
+          let j = 1;
+          while (j <= i) {
+            res += "* ";
+            j++;
+          }
+          res += "\n";
+          i--;
+        }
+        return res;
+      }
+
+      function hollowInvertedTriangleWhile() {
+        let res = "";
+        let i = n;
+        while (i >= 1) {
+          let j = 1;
+          while (j <= i) {
+            res += j === 1 || j === i || i === n ? "* " : "  ";
+            j++;
+          }
+          res += "\n";
+          i--;
+        }
+        return res;
+      }
+
+      function filledPyramidWhile() {
+        let res = "";
+        let i = 1;
+        while (i <= n) {
+          res += "  ".repeat(n - i);
+          let j = 1;
+          while (j <= 2 * i - 1) {
+            res += "* ";
+            j++;
+          }
+          res += "\n";
+          i++;
+        }
+        return res;
+      }
+
+      function hollowPyramidWhile() {
+        let res = "";
+        let i = 1;
+        while (i <= n) {
+          res += "  ".repeat(n - i);
+          let j = 1;
+          while (j <= 2 * i - 1) {
+            res += j === 1 || j === 2 * i - 1 || i === n ? "* " : "  ";
+            j++;
+          }
+          res += "\n";
+          i++;
+        }
+        return res;
+      }
+
+      function filledInvertedPyramidWhile() {
+        let res = "";
+        let i = n;
+        while (i >= 1) {
+          res += "  ".repeat(n - i);
+          let j = 1;
+          while (j <= 2 * i - 1) {
+            res += "* ";
+            j++;
+          }
+          res += "\n";
+          i--;
+        }
+        return res;
+      }
+
+      function hollowInvertedPyramidWhile() {
+        let res = "";
+        let i = n;
+        while (i >= 1) {
+          res += "  ".repeat(n - i);
+          let j = 1;
+          while (j <= 2 * i - 1) {
+            res += j === 1 || j === 2 * i - 1 || i === n ? "* " : "  ";
+            j++;
+          }
+          res += "\n";
+          i--;
+        }
+        return res;
+      }
+
+      //  for loop patterns
+      function showForPatterns() {
+        outputDiv.innerHTML = `
+      <h2>For Loop</h2>
+        <h2>Filled Square </h2><pre>${filledSquareFor()}</pre>
+        <h2>Hollow Square </h2><pre>${hollowSquareFor()}</pre>
+
+        <h2>Filled Left Triangle </h2><pre>${filledLeftTriangleFor()}</pre>
+        <h2>Hollow Left Triangle </h2><pre>${hollowLeftTriangleFor()}</pre>
+
+        <h2>Filled Right Triangle </h2><pre>${filledRightTriangleFor()}</pre>
+        <h2>Hollow Right Triangle </h2><pre>${hollowRightTriangleFor()}</pre>
+
+        <h2>Filled Inverted Triangle </h2><pre>${filledInvertedTriangleFor()}</pre>
+        <h2>Hollow Inverted Triangle </h2><pre>${hollowInvertedTriangleFor()}</pre>
+
+        <h2>Filled Pyramid </h2><pre>${filledPyramidFor()}</pre>
+        <h2>Hollow Pyramid </h2><pre>${hollowPyramidFor()}</pre>
+
+        <h2>Filled Inverted Pyramid </h2><pre>${filledInvertedPyramidFor()}</pre>
+        <h2>Hollow Inverted Pyramid </h2><pre>${hollowInvertedPyramidFor()}</pre>
+      `;
+      }
+
+      //  while loop patterns
+      function showWhilePatterns() {
+        outputDiv.innerHTML = `
+      <h2>While Loop</h2>
+        <h2>Filled Square </h2><pre>${filledSquareWhile()}</pre>
+        <h2>Hollow Square </h2><pre>${hollowSquareWhile()}</pre>
+
+        <h2>Filled Left Triangle </h2><pre>${filledLeftTriangleWhile()}</pre>
+        <h2>Hollow Left Triangle </h2><pre>${hollowLeftTriangleWhile()}</pre>
+
+        <h2>Filled Right Triangle </h2><pre>${filledRightTriangleWhile()}</pre>
+        <h2>Hollow Right Triangle </h2><pre>${hollowRightTriangleWhile()}</pre>
+
+        <h2>Filled Inverted Triangle </h2><pre>${filledInvertedTriangleWhile()}</pre>
+        <h2>Hollow Inverted Triangle </h2><pre>${hollowInvertedTriangleWhile()}</pre>
+
+        <h2>Filled Pyramid</h2><pre>${filledPyramidWhile()}</pre>
+        <h2>Hollow Pyramid </h2><pre>${hollowPyramidWhile()}</pre>
+
+        <h2>Filled Inverted Pyramid </h2><pre>${filledInvertedPyramidWhile()}</pre>
+        <h2>Hollow Inverted Pyramid </h2><pre>${hollowInvertedPyramidWhile()}</pre>
+      `;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>FOOD ORDER</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to right, #ffe259, #ffa751);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        background-color: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 90%;
+        max-width: 400px;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      pre {
+        text-align: left;
+        background-color: #f4f4f4;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 25px;
+      }
+
+      button {
+        background-color: #ff7f50;
+        color: white;
+        font-size: 20px;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #e96a3e;
+      }
+
+      #display {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🍽️ Food Order System</h1>
+      <pre>
+Menu:
+1. Dhokla - ₹30
+2. Tari Poha - ₹20
+3. Dosa - ₹50
+0. Finish Order
+      </pre>
+      <button onclick="orderFood()">Order Food</button>
+      <p id="display"></p>
+    </div>
+
+    <script>
+      function orderFood() {
+        let total = 0;
+        for (;;) {
+          let choice = prompt("Enter your chice or 0 for finish");
+          if (choice == 1) {
+            total = total + 30;
+            alert("you selected Dhokla");
+          } 
+          else if (choice == 2) {
+            total = total + 20;
+            alert("you selected Tari poha");
+          } 
+          else if (choice == 3) {
+            total = total + 50;
+            alert("you selected Dosa");
+          } 
+          else if (choice == 0) {
+            document.getElementById("display").innerHTML =
+              "Your total bill is ₹" + total;
+            break;
+          } 
+          else {
+            alert("Invalid choice");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

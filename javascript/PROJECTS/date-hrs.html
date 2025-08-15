@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greeting Message</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #e0eafc, #cfdef3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .box {
+        background-color: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      #show-message {
+        font-size: 22px;
+        font-weight: bold;
+        color: #444;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>🌞 Time-Based Greeting</h1>
+      <p id="show-message">Loading...</p>
+    </div>
+
+    <script>
+      let date = new Date();
+      var time = date.getHours();
+
+      switch (true) {
+        case (time >= 5 && time <= 11.59):
+          alert("Good morning");
+          greetingMessage = "Good morning";
+          break;
+        case (time >= 12 && time <= 17.59):
+          alert("Good afternoon");
+          greetingMessage = "Good afternoon";
+          break;
+        case (time >= 18 && time <= 21.59):
+          alert("Good evening");
+          greetingMessage = "Good evening";
+          break;
+        case (time >= 22 && time <= 24) || (time >= 0 && time <= 4.59):
+          alert("Good night");
+          greetingMessage = "Good night";
+          break;
+        default:
+          alert("Invalid time");
+          greetingMessage = "Invalid time";
+          break;
+      }
+
+      document.getElementById("show-message").innerHTML = greetingMessage;
+    </script>
+  </body>
+</html>

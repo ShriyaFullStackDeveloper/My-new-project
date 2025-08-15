@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gold Coins Chest</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #f4a546;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .one {
+      background-color: #fff;
+      width: 320px;
+      padding: 20px 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    .one1 img {
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      margin: 8px 0 15px;
+      color: #444;
+    }
+
+    .display {
+      background-color: #26c6da;
+      color: white;
+      font-size: 48px;
+      font-weight: 700;
+      border-radius: 10px;
+      padding: 25px 0;
+      margin-bottom: 25px;
+      user-select: none;
+    }
+
+    .one2 {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .one21 button {
+      flex: 1;
+      padding: 12px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+      cursor: pointer;
+      background-color: #304352;
+      transition: background-color 0.3s ease;
+    }
+
+    .one21 button:hover {
+      background-color: #1c2530;
+    }
+
+    .one3 {
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      color: #00796b;
+      font-weight: 600;
+      font-size: 18px;
+      min-height: 48px;
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="one">
+    <div class="one1">
+      <img src="https://cdna.artstation.com/p/assets/images/images/015/292/548/large/amal-uppal-gem-chest.jpg?1547811369"
+        height="100" width="100" alt="Gold Chest" />
+      <h3>Gold Coins in Chest</h3>
+      <div class="display">
+        <p id="coin">0</p>
+      </div>
+    </div>
+    <div class="one2">
+      <div class="one21">
+        <button onclick="addCoin()">Add</button>
+      </div>
+      <div class="one21">
+        <button onclick="subCoin()">Sub</button>
+      </div>
+    </div>
+    <div class="one3">
+      <h3 id="add-Coin"></h3>
+      <h3 id="sub-Coin"></h3>
+    </div>
+  </div>
+
+  <script>
+    let coin = 0;
+    document.getElementById("coin").innerHTML = coin;
+
+    function addCoin() {
+      let getCoin = Number(prompt("Enter the coin"));
+      coin += getCoin;
+      document.getElementById("coin").innerHTML = coin;
+      document.getElementById("add-Coin").innerHTML = "You Added = " + getCoin + " coin";
+    }
+
+    function subCoin() {
+      let getCoin = Number(prompt("Enter the coin"));
+      coin -= getCoin;
+      document.getElementById("coin").innerHTML = coin;
+      document.getElementById("sub-Coin").innerHTML = "You Subtracted = " + getCoin + " coin";
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vowel Checker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1rem;
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff6f61;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e65a4f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Vowel or Consonant Checker</h2>
+    <input type="text" id="letterInput" maxlength="1" placeholder="Enter a letter" />
+    <br />
+    <button onclick="checkLetter()">Check</button>
+  </div>
+
+  <script>
+    function checkLetter() {
+      let a = document.getElementById("letterInput").value.toLowerCase();
+
+      // ternary operator
+      let check = 
+        a == "a"|| a == "e"||a =="i"
+        || a == "o"||a =="u" ?
+        "it is a vowel"
+        : "consonent";
+      console.log(check);
+
+      // if else
+      if(a == "a"|| a == "e"||a =="i"
+        || a == "o"||a =="u"){
+        alert("a is a vowel");
+      }
+      else{
+        alert("a is not a vowel");
+      }
+    }
+  </script>
+</body>
+</html>

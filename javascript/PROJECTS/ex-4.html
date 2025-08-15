@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Age Eligibility Checker</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 350px;
+    }
+
+    .card h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .card p {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .card button {
+      background-color: #ff7e5f;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .card button:hover {
+      background-color: #e85b3d;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>🗳️ Voter Eligibility Check</h2>
+    <p>Click the button and enter your age to know if you can vote.</p>
+    <button onclick="age()">Check Age</button>
+  </div>
+
+  <script>
+    function age() {
+      let age = prompt("Enter the Age");
+      
+      if (age >= 18) {
+          alert("you are eligible for vote!")
+      }
+      else {
+          alert("you are not eligible for vote!")
+      }
+    }

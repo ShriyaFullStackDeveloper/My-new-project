@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Result Button</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    button {
+      width: 250px;
+      padding: 20px 0;
+      font-size: 28px;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      background-color: #6b7fd7;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(107, 127, 215, 0.6);
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+
+    button:hover {
+      background-color: #4e62b8;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="result()">Result</button>
+
+  <script>
+    function result(){
+      let mathMarks = 40;
+      let scienceMarks = 35;
+      let total = 0;
+      total = total + mathMarks;
+      alert(total);
+      total += scienceMarks;
+      alert(total);
+    }
+  </script>
+
+</body>
+</html>

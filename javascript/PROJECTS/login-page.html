@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+      text-align: center;
+    }
+
+    .main-container {
+      background-color: #f0f4f8;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      width: 380px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 8px;
+      font-weight: 600;
+      text-align: left;
+      color: #444;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      border: 1.5px solid #bbb;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    input:focus {
+      border-color: #667eea;
+      background-color: #e6e9ff;
+    }
+
+    ::placeholder {
+      color: #999;
+      font-style: italic;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px 0;
+      font-size: 22px;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      background-color: #667eea;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #5469d4;
+    }
+
+    #display {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #00796b;
+      min-height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <h1>Welcome Back</h1>
+    <label for="userInput">Email or Username</label>
+    <input type="text" id="userInput" placeholder="Enter username or email id" />
+
+    <label for="passInput">Enter Password</label>
+    <input type="password" id="passInput" placeholder="Enter Password" />
+
+    <button onclick="result()">Result</button>
+
+    <div id="display"></div>
+  </div>
+
+  <script>
+    function result() {
+      let username = prompt("Enter your username");
+      let password = prompt("Enter the password");
+      let displayMessage = "";
+
+      if (username == 'username' || username == 'user@example.com' && password == 1234) {
+        displayMessage = "Login Succesfull";
+      } else {
+        displayMessage = "Login failed";
+      }
+      alert(displayMessage);
+      document.getElementById("display").innerHTML = displayMessage;
+    }
+  </script>
+</body>
+
+</html>

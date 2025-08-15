@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Playful Word Scramble Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #fcb69f 0%, #a1c4fd 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fredoka One', cursive;
+      margin: 0;
+    }
+    .game-container, .start-container {
+      background: #fff8f0;
+      border-radius: 28px;
+      box-shadow: 0 8px 32px rgba(255, 140, 105, 0.2);
+      padding: 40px 32px;
+      text-align: center;
+      width: 370px;
+      position: relative;
+      display: none;
+    }
+    .start-container {
+      display: block;
+    }
+    .banner-image {
+      width: 180px;
+      height: 120px;
+      object-fit: contain;
+      border-radius: 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 16px rgba(79, 140, 255, 0.12);
+      background: #fff;
+      border: 3px solid #ffb347;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1 {
+      color: #ff6f61;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+      font-size: 2.2em;
+    }
+    .scrambled-word {
+      font-size: 2em;
+      color: #4f8cff;
+      background: #e0f7fa;
+      padding: 12px 24px;
+      border-radius: 16px;
+      margin-bottom: 18px;
+      display: inline-block;
+      letter-spacing: 6px;
+      font-weight: bold;
+    }
+    .timer {
+      font-size: 1.2em;
+      color: #ff6f61;
+      margin-bottom: 10px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    input[type="text"] {
+      padding: 10px 16px;
+      border: 2px solid #ffb347;
+      border-radius: 12px;
+      font-size: 1.1em;
+      outline: none;
+      margin-bottom: 16px;
+      background: #fffbe7;
+      color: #ff6f61;
+      font-family: inherit;
+      transition: border 0.2s;
+    }
+    input[type="text"]:focus {
+      border: 2px solid #4f8cff;
+    }
+    button {
+      background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 10px 28px;
+      font-size: 1.1em;
+      font-family: inherit;
+      cursor: pointer;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      transition: background 0.2s;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(255, 179, 71, 0.15);
+    }
+    button:hover {
+      background: linear-gradient(90deg, #ffcc33 0%, #ffb347 100%);
+    }
+    .message {
+      font-size: 1.1em;
+      margin-top: 12px;
+      color: #43a047;
+      min-height: 24px;
+      font-weight: bold;
+    }
+    .score {
+      color: #4f8cff;
+      font-size: 1.1em;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Start Screen -->
+  <div class="start-container" id="startContainer">
+    <img src="https://plus.unsplash.com/premium_photo-1666739032149-5baca96d6d41?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d29yZHN8ZW58MHx8MHx8fDA%3D" alt="Word Scramble Banner" class="banner-image" />
+    <h1>Word Scramble!</h1>
+    <p style="color:#4f8cff; font-size:1.1em; margin-bottom:24px;">Unscramble the word before time runs out!</p>
+    <button id="startBtn">Start Game</button>
+  </div>
+  <!-- Game Screen -->
+  <div class="game-container" id="gameContainer">
+    <h1>Word Scramble!</h1>
+    <div class="timer" id="timer">Time: 30s</div>
+    <div class="scrambled-word" id="scrambledWord">_ _ _ _ _</div>
+    <form id="guessForm" autocomplete="off">
+      <input type="text" id="guessInput" placeholder="Your guess..." required />
+      <br>
+      <button type="submit">Guess</button>
+    </form>
+    <div class="message" id="message"></div>
+    <div class="score" id="score">Score: 0</div>
+  </div>
+  <script>
+    // Words and timer
+    const words = [
+      { word: "rainbow" },
+      { word: "puzzle" },
+      { word: "giraffe" },
+      { word: "balloon" },
+      { word: "cupcake" },
+      { word: "sunshine" },
+      { word: "jungle" },
+      { word: "rocket" },
+      { word: "unicorn" },
+      { word: "bubbles" }
+    ];
+    let currentWord = "";
+    let scrambled = "";
+    let score = 0;
+    let timer = 30;
+    let timerInterval;
+
+    function scramble(word) {
+      let arr = word.split('');
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      // Ensure the scrambled word is not the same as the original
+      if (arr.join('') === word) return scramble(word);
+      return arr.join('');
+    }
+
+    function newWord() {
+      clearInterval(timerInterval);
+      timer = 30;
+      document.getElementById('timer').textContent = `Time: ${timer}s`;
+      const randomObj = words[Math.floor(Math.random() * words.length)];
+      currentWord = randomObj.word;
+      scrambled = scramble(currentWord);
+      document.getElementById('scrambledWord').textContent = scrambled.toUpperCase();
+      document.getElementById('guessInput').value = "";
+      document.getElementById('message').textContent = "";
+      startTimer();
+    }
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timer--;
+        document.getElementById('timer').textContent = `Time: ${timer}s`;
+        if (timer <= 0) {
+          clearInterval(timerInterval);
+          document.getElementById('message').textContent = `⏰ Time's up! The word was "${currentWord.toUpperCase()}".`;
+          setTimeout(newWord, 2000);
+        }
+      }, 1000);
+    }
+
+    document.getElementById('guessForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const guess = document.getElementById('guessInput').value.trim().toLowerCase();
+      if (guess === currentWord) {
+        clearInterval(timerInterval);
+        score++;
+        document.getElementById('message').textContent = "🎉 Correct! Let's try another!";
+        document.getElementById('score').textContent = `Score: ${score}`;
+        setTimeout(newWord, 1200);
+      } else {
+        document.getElementById('message').textContent = "❌ Oops! Try again!";
+      }
+    });
+
+    // Start button logic
+    document.getElementById('startBtn').addEventListener('click', function() {
+      document.getElementById('startContainer').style.display = 'none';
+      document.getElementById('gameContainer').style.display = 'block';
+      score = 0;
+      document.getElementById('score').textContent = `Score: ${score}`;
+      newWord();
+      document.getElementById('guessInput').focus();
+    });
+
+    // Optional: Allow pressing Enter to start
+    document.addEventListener('keydown', function(e) {
+      if (document.getElementById('startContainer').style.display !== 'none' && (e.key === 'Enter' || e.key === ' ')) {
+        document.getElementById('startBtn').click();
+      }
+    });
+  </script>
+</body>
+</html>

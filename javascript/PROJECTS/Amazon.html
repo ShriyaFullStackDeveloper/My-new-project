@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Discount Calculator</title>
+  <style>
+    body {
+      background: #f0f8ff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 350px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .output {
+      margin-top: 20px;
+      font-size: 16px;
+      text-align: left;
+    }
+
+    .output span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Discount Calculator</h2>
+    <select id="userType">
+      <option value="">-- Select User Type --</option>
+      <option value="Prime">Prime</option>
+      <option value="Regular">Regular</option>
+      <option value="Guest">Guest</option>
+    </select>
+
+    <input type="number" id="purchaseAmount" placeholder="Enter purchase amount (₹)" />
+
+    <button onclick="runCalculation()">Calculate</button>
+
+    <div class="output" id="output"></div>
+  </div>
+
+  <script>
+    function calculateDiscount(userType, purchaseAmount) {
+      let discount = 0;
+
+      if (userType === "Prime") {
+          discount = purchaseAmount * 0.20;
+      } 
+      else if (userType === "Regular") {
+          if (purchaseAmount < 1000) {
+              discount = 0;
+          } else if (purchaseAmount >= 1000 && purchaseAmount < 5000) {
+              discount = purchaseAmount * 0.10;
+          } else if (purchaseAmount >= 5000) {
+              discount = purchaseAmount * 0.15;
+          }
+      } 
+      else if (userType === "Guest") {
+          if (purchaseAmount > 2000) {
+              discount = purchaseAmount * 0.05;
+          } else {
+              discount = 0;
+          }
+      } 
+      else {
+          document.getElementById("output").innerHTML = "Invalid user type.";
+          return;
+      }
+
+      let finalAmount = purchaseAmount - discount;
+
+      // Also show result in the page
+      document.getElementById("output").innerHTML = `
+        <p><span>User Type:</span> ${userType}</p>
+        <p><span>Purchase Amount:</span> ₹${purchaseAmount}</p>
+        <p><span>Discount:</span> ₹${discount.toFixed(2)}</p>
+        <p><span>Final Payable Amount:</span> ₹${finalAmount.toFixed(2)}</p>
+      `;
+    }
+
+    function runCalculation() {
+      const userType = document.getElementById("userType").value;
+      const purchaseAmount = Number(document.getElementById("purchaseAmount").value);
+
+      if (userType === "" || isNaN(purchaseAmount) || purchaseAmount <= 0) {
+        document.getElementById("output").innerHTML = "❌ Please enter valid user type and amount.";
+        return;
+      }
+
+      calculateDiscount(userType, purchaseAmount);
+    }
+  </script>
+</body>
+</html>

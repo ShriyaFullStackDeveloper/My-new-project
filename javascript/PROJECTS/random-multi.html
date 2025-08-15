@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multiplication Game</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: #f2f6ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+
+    span {
+      color: #0077ff;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      box-sizing: border-box;
+      margin-top: 10px;
+    }
+
+    input[type="number"]:focus {
+      border-color: #0077ff;
+      background-color: #f0f7ff;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background-color: #0077ff;
+      color: white;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005fcc;
+    }
+
+    #result {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Multiply the numbers</h1>
+    <p>Number 1 = <span id="num-1"></span></p>
+    <p>Number 2 = <span id="num-2"></span></p>
+
+    <button onclick="getNumber()">Get Numbers</button>
+    <input type="number" id="input" placeholder="Enter your ans.." />
+    <button onclick="checkAnswer()">Submit answer</button>
+
+    <p id="result">Result</p>
+  </div>
+
+  <script>
+    let num1 = 0;
+    let num2 = 0;
+    let multiplication = 0;
+
+    function getNumber() {
+      num1 = Math.floor(Math.random() * 10 + 1);
+      num2 = Math.floor(Math.random() * 10 + 1);
+
+      document.getElementById("num-1").innerHTML = num1;
+      document.getElementById("num-2").innerHTML = num2;
+
+      multiplication = num1 * num2;
+    }
+
+    function checkAnswer() {
+      let userAnswer = document.getElementById("input").value;
+      document.getElementById("result").innerHTML =
+        userAnswer == multiplication;
+      alert(multiplication);
+    }
+  </script>
+</body>
+</html>

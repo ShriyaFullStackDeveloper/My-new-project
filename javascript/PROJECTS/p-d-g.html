@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fruit List App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f0f9ff, #cbebff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      background-color: #38bdf8;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0ea5e9;
+    }
+
+    h3 {
+      margin-top: 20px;
+      color: #333;
+    }
+
+    .fruit-box {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f0f9ff;
+      border-radius: 10px;
+      text-align: left;
+      max-height: 150px;
+      overflow-y: auto;
+    }
+
+    .fruit-item {
+      padding: 5px;
+      margin-bottom: 5px;
+      background-color: #e0f7ff;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>🍎 Fruit List App</h2>
+    <input id="fruitInput" placeholder="Write fruit name" />
+    <br>
+    <button onclick="showFruits()">Show</button>
+    <button onclick="addFruit()">Add</button>
+    <button onclick="removeFruit()">Remove</button>
+
+    <h3>Fruits:</h3>
+    <div id="fruitList" class="fruit-box"></div>
+  </div>
+
+  <script>
+    var fruits = [];
+
+    function showFruits() {
+      var output = "";
+      for (var i = 0; i < fruits.length; i++) {
+        output += "<div class='fruit-item'>" + fruits[i] + "</div>";
+      }
+      document.getElementById("fruitList").innerHTML = output;
+    }
+
+    function addFruit() {
+      var name = document.getElementById("fruitInput").value;
+      if (name !== "") {
+        fruits[fruits.length] = name;
+        showFruits();
+      }
+    }
+
+    function removeFruit() {
+      var name = document.getElementById("fruitInput").value;
+      var newFruits = [];
+
+      for (var i = 0; i < fruits.length; i++) {
+        if (fruits[i] !== name) {
+          newFruits[newFruits.length] = fruits[i];
+        }
+      }
+
+      fruits = newFruits;
+      showFruits();
+    }
+  </script>
+
+</body>
+</html>
